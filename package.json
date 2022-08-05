@@ -2,7 +2,7 @@
   "name": "can-doit-7team",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VolodymyrKoch.github.io/can-doit-7team",
+  "homepage": "https://eleks-bootcamp.github.io/can-doit-7team",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
