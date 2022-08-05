@@ -1,11 +1,10 @@
-import FirstComponent from './components/FirstComponen/Firstcomponent.jsx';
-import './App.css';
+import MainPage from './pages/MainPage/MainPage';
 
 function App() {
   return (
     <div className="App">
-      <FirstComponent />
-      <header className="App-header">222header</header>
+      <MainPage />
+      <div className="App">222App</div>
     </div>
   );
 }
