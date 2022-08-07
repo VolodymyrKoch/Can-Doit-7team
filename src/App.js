@@ -1,10 +1,10 @@
 import MainPage from './pages/MainPage/MainPage';
+import Emergency from './components/emergency/emergency'
 
 function App() {
   return (
     <div className="App">
-      <MainPage />
-      <div className="App">222App</div>
+      <Emergency/>
     </div>
   );
 }
