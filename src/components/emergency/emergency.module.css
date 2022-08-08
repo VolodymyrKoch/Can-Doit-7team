@@ -1,32 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Roboto&display=swap');
-/*font-family: 'Inter', sans-serif;
- font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto', sans-serif; */
-
-:root {
-  --blackOpacity-60: rgba(0, 0, 0, 0.6);
-  --blackOpacity-40: rgb(163, 163, 163);
-  --whiteFone: #ffffff;
-}
-body {
-  background: var(--blackOpacity-60);
-}
-* {
-  margin:0;
-  padding: 0;
-  box-sizing:border-box;
-}
-ul[class] {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
 
 .container {
   width:900px;
   margin: 1rem auto;
   padding: 1.5rem;
+  background: var(--blackOpacity-60);
 }
 #component-emergency {
   font-family:'Inter', 'Montserrat', 'Roboto', sans-serif;
@@ -79,13 +56,13 @@ a {
 .icon-item {
   width:80px;
   height: 58px;
-  background:center no-repeat url('./UI/book.png');
+  background:center no-repeat url('../../image/book.png');
   background-size: auto;
   margin: 0;
   padding: 0;
 }
 .ce-forbidden-todo-item .icon-item {
-  background:center no-repeat url('./UI/notification.png');
+  background:center no-repeat url('../../image/notification.png');
 }
 
 .text-item {
@@ -112,7 +89,7 @@ a {
   top:50%;
   transform: translateY(-50%);
   left:0;
-  background: no-repeat url('./UI/notification.png');
+  background: no-repeat url('../../image/notification.png');
 }
 
 .ce-breadcrumb ul {
@@ -148,7 +125,7 @@ a {
   
   }
   .ce-forbidden-todo-item .icon-item {
-    background:left no-repeat url('./UI/notification.png');
+    background:left no-repeat url('../../image/notification.png');
     width:5%;
   }
   .ce-btn {

@@ -1,5 +1,5 @@
 import React from "react";
-import './emergency.css'
+import classes from'./emergency.module.css'
 
 const Emergency = props => {
 

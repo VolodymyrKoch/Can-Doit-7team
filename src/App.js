@@ -4,7 +4,7 @@ import Emergency from './components/emergency/emergency'
 function App() {
   return (
     <div className="App">
-      <Emergency/>
+       <MainPage />
     </div>
   );
 }
