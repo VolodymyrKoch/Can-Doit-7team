@@ -1,24 +1,24 @@
 
 .container {
-  width:900px;
+  width:100%;
   margin: 1rem auto;
   padding: 1.5rem;
   background: var(--blackOpacity-60);
 }
-#component-emergency {
+#componentEmergency {
   font-family:'Inter', 'Montserrat', 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   color:var(--whiteFone);
   width: 100%;
 }
-.ce-breadcrumb, .ce-btn {
+.ceBreadcrumb, .ce-btn {
   color: var(--blackOpacity-40);
   line-height: 1.2rem;
   text-align: justify;
   padding:10px 0.5rem;
 }
-.ce-hr {
+.ceHr {
   text-align: center;
   width:100%;
   margin: 0px 0 12px;
@@ -26,62 +26,63 @@
   border:none;
   border-bottom: 1px solid var(--whiteFone);
 }
-.ce-content {
+.ceContent {
   display: flex;
   flex-direction: column;
 }
-.ce-title {
-  padding: 1rem;
+.ceTitle {
+  padding: 0.5rem;
   font-weight: 600;
   font-size: 1.25rem;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
-.ce-todo-item, .ce-forbidden-todo-item {
+.ceTodoItem, .ceForbiddenTodoItem {
   display: grid;
   grid-gap:10px;
   grid-template-columns: repeat(2, minmax(270px, 1fr));
   font-size: 0;
 
 }
-.ce-todo-item li, .ce-forbidden-todo-item li{
+.ceTodoItem li, .ceForbiddenTodoItem li{
   display: flex;
   flex-direction: row;
   font-size: 1rem;
   align-items: center;
 }
-.ce-todo-item li {
+.ceTodoItem li {
   justify-content: flex-start; 
 }
 
-.icon-item {
+.iconItem {
   width:80px;
   height: 58px;
-  background:center no-repeat url('../../image/book.png');
+  background:center no-repeat url('../../image/icon/book.png');
   background-size: auto;
   margin: 0;
   padding: 0;
 }
-.ce-forbidden-todo-item .icon-item {
-  background:center no-repeat url('../../image/notification.png');
+.ceForbiddenTodoItem .iconItem {
+  background:center no-repeat url('../../image/icon/notification.png');
 }
 
-.text-item {
+.textItem {
   width: calc(100% - 80px);
   margin: 0;
   padding: 0 10px 0;
 
 }
-.ce-btn {
+
+.ceBtn {
   margin: 0 3%;
   width: 25%;
 }
-.ce-btn-link {
+.ceBtnLink {
   padding: 10px 35px;
   position: relative;
   display: block;
   color: var(--blackOpacity-40);
 }
-.ce-btn-link::before {
+.ceBtnLink::before {
   content: '';
   position: absolute;
   width:25px;
@@ -89,10 +90,10 @@
   top:50%;
   transform: translateY(-50%);
   left:0;
-  background: no-repeat url('../../image/notification.png');
+  background: no-repeat url('../../image/icon/notification.png');
 }
 
-.ce-breadcrumb ul {
+.ceBreadcrumb ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -100,42 +101,46 @@
   padding: 0;
 }
   
-.ce-breadcrumb li:not(:last-child)::after {
+.ceBreadcrumb li:not(:last-child)::after {
   display: inline-block;
   margin: 0 .2rem;
   content: "-";
 }
-.ce-breadcrumb-link{
+.ceBreadcrumbLink{
   color: var(--blackOpacity-40);
 }
 
 @media all and (max-width: 768px) {
-  #component-emergency {
+  #componentEmergency {
     margin:0 0 0 10%;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: 80%;
   }
-  .ce-todo-item, .ce-forbidden-todo-item {
+  .ceTodoItem, .ceForbiddenTodoItem {
     grid-template-columns: 1fr;
   }
-  .text-item {
-    width: calc(80% - 80px);
+  .textItem {
+    width: calc(100% - 80px);
     margin: 0 ;
     padding: 0 10px 0;
   
   }
-  .ce-forbidden-todo-item .icon-item {
-    background:left no-repeat url('../../image/notification.png');
-    width:5%;
+  .ceForbiddenTodoItem .textItem {
+    width: calc(100% - 40px);
+  
   }
-  .ce-btn {
+  .ceForbiddenTodoItem .iconItem {
+    background:left no-repeat url('../../image/icon/notification.png');
+    width:40px;
+  }
+  .ceBtn {
     width: 50%;
     margin: 0
   }
-  .ce-title {
-    font-size: 1.75rem;
-  }
-  .ce-todo-item li, .ce-forbidden-todo-item li{
+  .ceTitle {
     font-size: 1.5rem;
+  }
+  .ceTodoItem li, .ceForbiddenTodoItem li{
+    font-size: 1.25rem;
   }
 }
