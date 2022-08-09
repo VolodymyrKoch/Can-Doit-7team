@@ -10,8 +10,8 @@ const MainPage = function () {
     <>
       <div className={styles.bgContainer}>
         <Header />
-        <Emergency/>
         <FirstComponent />
+        <Emergency/>
       </div>
     </>
   );
