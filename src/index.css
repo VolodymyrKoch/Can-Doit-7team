@@ -1,15 +1,27 @@
-/* reset.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Roboto&display=swap');
+/*font-family: 'Inter', sans-serif;
+ font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+:root {
+  --blackOpacity-60: rgba(0, 0, 0, 0.6);
+  --blackOpacity-40: rgb(163, 163, 163);
+  --whiteFone: #ffffff;
+}
+
+
 html {
   box-sizing: border-box;
   transition: .5s ease-in-out;
-}
+  }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-#root {
+#root, * {
   margin: 0;
   padding: 0;
 }
@@ -17,10 +29,10 @@ html {
 ul {
   list-style: none;
 }
-/* a {
+a {
   text-decoration: none;
   outline: none;
-} */
+}
 img {
   display: block;
   width: 100%;
