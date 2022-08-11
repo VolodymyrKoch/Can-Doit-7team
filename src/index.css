@@ -5,9 +5,13 @@
 font-family: 'Roboto', sans-serif; */
 
 :root {
-  --blackOpacity-60: rgba(0, 0, 0, 0.6);
+  --backgroundBlack: #111827;
+  --backgroundWhite: #FFFFFF;
   --blackOpacity-40: rgb(163, 163, 163);
-  --whiteFone: #ffffff;
+  --whiteFont: #ffffff;
+  --blackFont: #000000;
+  --btnDesktop:#5048E5;
+  --ceForbiddenTodoTitleColorDesktop: #FF2800;
 }
 
 

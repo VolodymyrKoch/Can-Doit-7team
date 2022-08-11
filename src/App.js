@@ -1,10 +1,13 @@
 import MainPage from './pages/MainPage/MainPage';
-import Emergency from './components/emergency/emergency'
+import { BrowserRouter } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
-       <MainPage />
+      <BrowserRouter>
+          <MainPage />
+      </BrowserRouter>
     </div>
   );
 }
