@@ -1,12 +1,12 @@
 import React from "react";
-import classes from'./emergency.module.css'
+import styles from'./emergency.module.css'
 
 const Emergency = props => {
 
    return (
 
     <div>
-        <div className="container">
+        <div className={styles.container}>
           <div id="component-emergency">
             <hr className="ce-hr"/>
             <nav aria-label="Breadcrumb" className="ce-breadcrumb">
@@ -20,7 +20,7 @@ const Emergency = props => {
                     <h2 className="ce-title">
                       Ваші дії
                     </h2>
-                    
+
                     <ul className="ce-todo-item">
                         <li><span className="icon-item"></span><span className="text-item">Повідомте 101 або 102</span></li>
                         <li><span className="icon-item"></span><span className="text-item">Позначте небезпечне місце добре видимим орієнтиром</span></li>
@@ -35,7 +35,7 @@ const Emergency = props => {
                     <h2 className="ce-title">
                       Заборонено
                     </h2>
-                    
+
                     <ul className="ce-forbidden-todo-item">
                         <li><span className="icon-item"></span><span className="text-item">Пересувати або брати в руки</span></li>
                         <li><span className="icon-item"></span><span className="text-item">Заливати рідиною</span></li>
@@ -57,7 +57,7 @@ const Emergency = props => {
         </div>
     </div>
 
-      
+
     )
 }
 

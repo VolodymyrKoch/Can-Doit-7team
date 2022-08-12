@@ -50,7 +50,7 @@
   align-items: center;
 }
 .ce-todo-item li {
-  justify-content: flex-start; 
+  justify-content: flex-start;
 }
 
 .icon-item {
@@ -99,7 +99,7 @@
   margin: 0;
   padding: 0;
 }
-  
+
 .ce-breadcrumb li:not(:last-child)::after {
   display: inline-block;
   margin: 0 .2rem;
@@ -122,7 +122,7 @@
     width: calc(80% - 80px);
     margin: 0 ;
     padding: 0 10px 0;
-  
+
   }
   .ce-forbidden-todo-item .icon-item {
     background:left no-repeat url('../../image/notification.png');
