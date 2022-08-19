@@ -14,26 +14,31 @@ const ReadMore = props => {
             <hr className={style.ceHr}/>
             <nav aria-label="Breadcrumb" className={style.ceBreadcrumb}>
               <ul>
-                  <li><a href="#" className={style.ceBreadcrumbLink}>наслідки війни</a></li>
-                  <li><span aria-current="page">знайшли вибухонебезпечні чи підозрілі предмети</span></li>
+              <li><a href="#" className={style.ceBreadcrumbLink}>Головна</a></li>
+                  <li><a href="#" className={style.ceBreadcrumbLink}>Надзвичайні ситуації</a></li>
+                  <li><span aria-current="page">Знайшли вибухонебезпечні чи підозрілі предмети</span></li>
               </ul>
             </nav>
             <div className={style.ceContent}>
-            <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyle}`}>
-                    <h2 className={style.ceTitle}>
-                       <Link to="/"  className={`${style.notActive} ${style.fontColorBlack }`}>Ваші дії</Link> 
-                    </h2>
-                    <ul className={`${style.ceTodoItem} ${style.visible}`}>
-                        <li><span className={style.iconItem}></span><span className={style.textItem}>Повідомте 101 або 102</span></li>
-                        <li><span className={style.iconItem}></span><span className={style.textItem}>Позначте небезпечне місце добре видимим орієнтиром</span></li>
-                        <li><span className={style.iconItem}></span><span className={style.textItem}>Попередьте про знахідку інших осіб поруч</span></li>
-                        <li><span className={style.iconItem}></span><span className={style.textItem}>Відведіть інших та відійдіть самостійно на безпечну відстань (не менше 100 м)</span></li>
-                    </ul>
+           
+            <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyleShadow}`}>
+                <h1 className={`${style.ceTitle} ${style.ceTitleH1}`}>
+                    <Link to="/" className={style.activeH1}>Знайшли вибухонебезпечні чи підозрілі предмети</Link>
+                </h1>
+                <h2 className={style.ceTitle}>
+                      <Link to="/"  className={`${style.notActive} ${style.fontColorBlack }`}>Ваші дії</Link> 
+                </h2>
+                <ul className={`${style.ceTodoItem} ${style.visible}`}>
+                    <li><span className={style.iconItem}></span><span className={style.textItem}>Повідомте 101 або 102</span></li>
+                    <li><span className={style.iconItem}></span><span className={style.textItem}>Позначте небезпечне місце добре видимим орієнтиром</span></li>
+                    <li><span className={style.iconItem}></span><span className={style.textItem}>Попередьте про знахідку інших осіб поруч</span></li>
+                    <li><span className={style.iconItem}></span><span className={style.textItem}>Відведіть інших та відійдіть самостійно на безпечну відстань (не менше 100 м)</span></li>
+                </ul>
                 </section>
 
                 <hr className={style.ceHr}/>
 
-                <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyle}`}>
+                <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyleShadowForbidden}`}>
                     <h2 className={style.ceTitle}>
                        <Link to="/"  className={`${style.forbiddenTodoTitle} ${style.notActive} `}> Заборонено</Link>
                     </h2>
@@ -50,9 +55,9 @@ const ReadMore = props => {
 
             </div>
             <hr className={style.ceHr}/>
-            <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyle}`}> 
+            <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyleShadow}`}> 
                 <div className={style.ceBtn}>
-                    <p className={`${style.ceBtnLink} ${style.active} ${style.notActiveDesktop}` }>Докладніше</p>
+                    <p className={`${style.active} ${style.ceBtnLink} ${style.notActiveDesktop}` }>Докладніше</p>
                 </div>
               <div className={style.textItemReadMore}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore velit, maiores nisi odit architecto doloribus earum nemo enim dolores quidem eligendi, ducimus, adipisci maxime aut inventore accusantium animi numquam autem.

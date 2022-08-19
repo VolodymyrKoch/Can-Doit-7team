@@ -12,27 +12,34 @@ const Emergency = props => {
             <hr className={style.ceHr}/>
             <nav aria-label="Breadcrumb" className={style.ceBreadcrumb}>
               <ul>
-                  <li><a href="#" className={style.ceBreadcrumbLink}>наслідки війни</a></li>
-                  <li><span aria-current="page">знайшли вибухонебезпечні чи підозрілі предмети</span></li>
+                  <li><a href="#" className={style.ceBreadcrumbLink}>Головна</a></li>
+                  <li><a href="#" className={style.ceBreadcrumbLink}>Надзвичайні ситуації</a></li>
+                  <li><span aria-current="page">Знайшли вибухонебезпечні чи підозрілі предмети</span></li>
               </ul>
             </nav>
             <div className={style.ceContent}>
-                <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyle}`}>
+              
+                <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyle} ${style.sectionDesktopStyleShadow }`}>
+                    <h1 className={`${style.ceTitle} ${style.ceTitleH1}`}>
+                      Знайшли вибухонебезпечні чи підозрілі предмети
+                    </h1>
                     <h2 className={style.ceTitle}>
                       Ваші дії
                     </h2>
-                    
                     <ul className={style.ceTodoItem}>
                         <li><span className={style.iconItem}></span><span className={style.textItem}>Повідомте 101 або 102</span></li>
                         <li><span className={style.iconItem}></span><span className={style.textItem}>Позначте небезпечне місце добре видимим орієнтиром</span></li>
                         <li><span className={style.iconItem}></span><span className={style.textItem}>Попередьте про знахідку інших осіб поруч</span></li>
                         <li><span className={style.iconItem}></span><span className={style.textItem}>Відведіть інших та відійдіть самостійно на безпечну відстань (не менше 100 м)</span></li>
                     </ul>
+                    <div className={`${style.ceBtn} ${style.visibleLg}`}>
+                      <Link to="/readMore"  className={` ${style.notActive}  ${style.ceBtnLink} ${style.notActiveDesktop}`}>Докладніше</Link> 
+                    </div>
                 </section>
 
                 <hr className={style.ceHr}/>
 
-                <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyle}`}>
+                <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyleShadowForbidden }`}>
                     <h2 className={`${style.ceTitle} ${style.forbiddenTodoTitle}`}>
                       Заборонено
                     </h2>
@@ -51,8 +58,8 @@ const Emergency = props => {
             </div>
             <hr className={style.ceHr}/>
 
-            <div className={style.ceBtn}>
-                <Link to="/readMore"  className={`${style.ceBtnLink} ${style.notActive} ${style.notActiveDesktop}`}>Докладніше</Link> 
+            <div className={`${style.ceBtn} ${style.hiddenLg}`}>
+                <Link to="/readMore"  className={` ${style.notActive}  ${style.ceBtnLink} ${style.notActiveDesktop}`}>Докладніше</Link> 
           </div>
          </div>
         </div>

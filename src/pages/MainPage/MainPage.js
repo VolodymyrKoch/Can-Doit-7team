@@ -15,8 +15,9 @@ const MainPage = function () {
           <Header />
           <FirstComponent />
 
+
           <Routes>
-              <Route path="/" element={<Emergency />}/>
+              <Route path="/" element={<Emergency/>}/>
               <Route path="/readMore" element={<ReadMore/>} />
           </Routes>
 

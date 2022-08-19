@@ -33,9 +33,18 @@ display: none;
   grid-gap:30px;
   grid-template-columns: 2fr 1fr;
 }
-.sectionDesktopStyle {
+.sectionDesktopStyleShadow {
   border-radius: 8px;
   box-shadow: 0px 4px 4px var(--blackOpacity-40);
+}
+.sectionDesktopStyleShadowForbidden {
+  box-shadow: 0px 4px 4px var(--sectionShadowColor);
+  ;
+}
+.sectionDesktopStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .ceTitle {
   padding: 0.5rem;
@@ -43,17 +52,25 @@ display: none;
   font-size: 1.25rem;
   margin: 0.5rem 0;
   color: var(--blackFont);
+  text-align: center;
+}
+.ceTitleH1 {
+  font-size: 1.5rem;
+  text-align: center;
 }
 .ceTodoItem, .ceForbiddenTodoItem {
   display: flex;
   flex-direction: column;
   border-top:1px solid #E6E8F0;
-  border-bottom:1px solid #E6E8F0;
+  /* border-bottom:1px solid #E6E8F0; */
   width:100%;
-  height: 90%;
   padding: 40px 0;
 
 
+}
+.ceForbiddenTodoItem {
+  border-bottom:none;
+  height: 100%;
 }
 .ceTodoItem li, .ceForbiddenTodoItem li{
   display: flex;
@@ -98,6 +115,7 @@ display: none;
   padding: 10px 35px;
   position: relative;
   display: block;
+  text-align: right;
 }
 .ceBtnLink::before {
   content: '';
@@ -119,8 +137,11 @@ display: none;
 .forbiddenTodoTitle {
   color: var(--ceForbiddenTodoTitleColorDesktop);
 }
-.visible{
+.visibleLg{
   display: block;
+}
+.hiddenLg{
+  display: none;
 }
 .textItem, .textItemReadMore {
   width: calc(100% - 80px);
@@ -139,8 +160,9 @@ display: none;
   padding: 40px 10px;
 
 }
-.fontColorBlack {
+.fontColorBlack, .activeH1 {
   color:var(--blackFont);
+  font-weight: 700;
 }
 
 @media all and (max-width: 768px) {
@@ -152,17 +174,19 @@ display: none;
   padding: 1.5rem;
   background: var(--backgroundBlack);
 }
-.sectionDesktopStyle {
+.sectionDesktopStyleShadow, .sectionDesktopStyleShadowForbidden {
   border-radius: none;
   box-shadow: none;
 }
 #componentEmergency {
   font-family:'Inter', 'Montserrat', 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var( --whiteFont);
-  width: 100%;
+  width: 80%;
+  margin:0 0 0 10%;
 }
+
 .ceBreadcrumb{
   display: block;
 }
@@ -193,14 +217,18 @@ display: none;
 .ceTitle {
   padding: 0.5rem;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   margin: 0.5rem 0;
+  color: var(--whiteFont);
+  text-align: left;
+}
+.activeH1 {
   color: var(--whiteFont);
 }
 .ceTodoItem, .ceForbiddenTodoItem {
   display: grid;
   grid-gap:10px;
-  grid-template-columns: repeat(2, minmax(270px, 1fr));
+  grid-template-columns: 1fr;
   border:none;
   height: 100%;
   margin: 0;
@@ -224,43 +252,50 @@ display: none;
   margin: 0;
   padding: 0;
 }
+
 .ceForbiddenTodoItem .iconItem {
-  background:center no-repeat url('../../image/icon/notification.png');
+  background:left no-repeat url('../../image/icon/notification.png');
+  width:40px;
   margin: 0;
 }
 
 .textItem {
-  width: calc(100% - 80px);
-  margin: 0;
-  padding: 0 10px 0;
   scrollbar-width: 6px;
   line-height: 1;
   font-weight: 500;
 
 }
-.visible {
+.textItem, .textItemReadMore {
+  width: calc(100% - 80px);
+  margin: 0 ;
+  padding: 0 10px 0;
+
+}
+.textItemReadMore {
+  width: 100%;
+  margin-top: 1rem;
+  line-height: 1;
+  border:none;
+}
+.visibleLg{
   display: none;
 }
-
+.hiddenLg{
+  display: block;
+}
 .ceBtn {
-  margin: 0 3%;
-  width: 25%;
+  margin: 0;
+  width: 50%;
   justify-content: flex-start;
 }
 .ceBtnLink {
-  padding: 10px 35px;
+  padding: 0;
   position: relative;
   display: block;
+  text-align: left;
 }
 .ceBtnLink::before {
-  content: '';
-  position: absolute;
-  width:25px;
-  height: 25px;
-  top:50%;
-  transform: translateY(-50%);
-  left:0;
-  background: no-repeat url('../../image/icon/notification.png');
+  display: none;
 }
 
 .ceBreadcrumb ul {
@@ -291,46 +326,22 @@ display: none;
   font-size: 1.125rem;
   font-weight: 600;
 } 
+.ceForbiddenTodoItem .textItem {
+  width: calc(100% - 40px);
+
+}
+
 /* end */
-  #componentEmergency {
-    margin:0 0 0 10%;
-    font-size: 1.25rem;
-    width: 80%;
-  }
-  .ceTodoItem, .ceForbiddenTodoItem {
-    grid-template-columns: 1fr;
-  }
-  .textItem, .textItemReadMore {
-    width: calc(100% - 80px);
-    margin: 0 ;
-    padding: 0 10px 0;
-  
-  }
-  .textItemReadMore {
-    width: 100%;
-    margin-top: 1rem;
-    line-height: 1;
-  }
-  .ceForbiddenTodoItem .textItem {
-    width: calc(100% - 40px);
-  
-  }
-  .ceForbiddenTodoItem .iconItem {
-    background:left no-repeat url('../../image/icon/notification.png');
-    width:40px;
-  }
-  .ceBtn {
-    width: 50%;
-    margin: 0
-  }
-  .ceTitle {
-    font-size: 1.5rem;
-  }
+ 
+
+
+
+
   .ceTodoItem li, .ceForbiddenTodoItem li{
     font-size: 1.25rem;
   }
-  .ceHr {
-    padding:0;
+  .ceTitleH1 {
+    text-align: center;
   }
 
 }
