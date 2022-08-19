@@ -46,6 +46,7 @@ const AlarmingSuitcase = function () {
                   {/* subjectList */}
                   {el.subjectList.map((subjectEl, subjectId) => (
                     <li key={subjectId} className={styles.subjectItem}>
+                      <input type="checkbox" />
                       {subjectEl}
                     </li>
                   ))}
