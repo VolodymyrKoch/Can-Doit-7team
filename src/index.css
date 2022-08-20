@@ -13,8 +13,9 @@ font-family: 'Roboto', sans-serif; */
   --ceForbiddenTodoTitleColorDesktop: #FF2800;
   --sectionShadowColor: rgba(255, 40, 0, 0.25);
   --colorHr: #E6E8F0;
+  --subject: #111827;
+  --subjectActive: rgba(17, 17, 136, 0.8);
 }
-
 
 html {
   box-sizing: border-box;
@@ -48,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 body {
   margin: 0;
-  font-family: 'Gotham Pro';
+  font-family: 'Inter';
   font-weight: 700;
   scrollbar-color: #264061 #f0f1f3;
   scrollbar-width: 6px;
