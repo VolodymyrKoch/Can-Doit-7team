@@ -1,18 +1,18 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat&family=Roboto&display=swap');
 /*font-family: 'Inter', sans-serif;
  font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
 :root {
   --backgroundBlack: #111827;
-  --backgroundWhite: #FFFFFF;
+  --whiteColor: #FFFFFF;
   --blackOpacity-40: rgb(163, 163, 163);
-  --whiteFont: #ffffff;
   --blackFont: #000000;
   --btnDesktop:#5048E5;
   --ceForbiddenTodoTitleColorDesktop: #FF2800;
   --sectionShadowColor: rgba(255, 40, 0, 0.25);
+  --colorHr: #E6E8F0;
 }
 
 
