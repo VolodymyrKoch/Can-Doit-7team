@@ -9,12 +9,13 @@ import ReadMore from '../../components/emergency/readMore';
 
 
 const MainPage = function () {
+  // eslint-disable-next-line no-unused-vars
+  const [searchValue, setSearchValue] = useState("");
+
   return (
     <>
       <div className={styles.bgContainer}>
-          <Header />
-          <FirstComponent />
-
+          <Header setSearchValue={setSearchValue}/>
           <Routes>
               <Route path="/" element={<Emergency />}/>
               <Route path="/readMore" element={<ReadMore/>} />
