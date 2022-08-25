@@ -33,6 +33,7 @@
   box-shadow: 0px 4px 4px var(--blackOpacity-40);
 }
 .sectionDesktopStyleShadowForbidden {
+  border-radius: 8px;
   box-shadow: 0px 4px 4px var(--sectionShadowColor);
 }
 .ceTitle {
@@ -64,10 +65,10 @@
   
 }
 .iconItem {
-  width:15rem;
+  width:10rem;
   min-height: 5rem;
-  background:center/contain no-repeat url('../../image/image1.png');
-  margin: 0;
+  background:transparent;
+  margin: 0 1rem;
   padding: 0;
 }
 .ceForbiddenTodoItem .iconItem {
@@ -114,7 +115,6 @@
   margin: 0.5rem 0 0;
   display: flex;
   justify-content: flex-end;
-  /* border-top:1px solid #E6E8F0; */
 }
 .visibleLg{
   display: block;
@@ -247,7 +247,7 @@
 .textItem {
   scrollbar-width: 6px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 400;
 
 }
 .textItem, .textItemReadMore {
