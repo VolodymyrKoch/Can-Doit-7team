@@ -1,4 +1,5 @@
 import React from "react";
+
 import style from'./emergency.module.css';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +8,7 @@ const Emergency = props => {
    return (
 
     <div>
+
         <div className={style.container}>
           <div id={style.componentEmergency}>
             <hr className={style.ceHr}/>
@@ -21,7 +23,6 @@ const Emergency = props => {
                     <h2 className={style.ceTitle}>
                       Ваші дії
                     </h2>
-                    
                     <ul className={style.ceTodoItem}>
                         <li><span className={style.iconItem}></span><span className={style.textItem}>Повідомте 101 або 102</span></li>
                         <li><span className={style.iconItem}></span><span className={style.textItem}>Позначте небезпечне місце добре видимим орієнтиром</span></li>
@@ -36,7 +37,6 @@ const Emergency = props => {
                     <h2 className={`${style.ceTitle} ${style.forbiddenTodoTitle}`}>
                       Заборонено
                     </h2>
-                    
                     <ul className={style.ceForbiddenTodoItem}>
                         <li><span className={style.iconItem}></span><span className={style.textItem}>Пересувати або брати в руки</span></li>
                         <li><span className={style.iconItem}></span><span className={style.textItem}>Заливати рідиною</span></li>
@@ -52,13 +52,13 @@ const Emergency = props => {
             <hr className={style.ceHr}/>
 
             <div className={style.ceBtn}>
-                <Link to="/readMore"  className={`${style.ceBtnLink} ${style.notActive} ${style.notActiveDesktop}`}>Докладніше</Link> 
+                <Link to="/readMore"  className={`${style.ceBtnLink} ${style.notActive} ${style.notActiveDesktop}`}>Докладніше</Link>
           </div>
          </div>
         </div>
     </div>
 
-      
+
     )
 }
 
