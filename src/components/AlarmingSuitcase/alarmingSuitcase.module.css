@@ -70,12 +70,18 @@
     line-height: 1.2;
     margin-bottom: 9px;
     color: var( --subject);
+    cursor: pointer;
 
     display: flex;
     align-items: center;
   }
   .subjectItem input {
     margin-right: 5px;
+  }
+  input:checked + .subjectEl{
+    color: var(--subjectActive);
+    margin-left: 10px;
+    font-weight: 700;
   }
 }
 
