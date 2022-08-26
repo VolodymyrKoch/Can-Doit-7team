@@ -10,7 +10,6 @@ import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage';
 import Accordion from '../../components/accordion/accordion';
 
 const MainPage = function () {
-  // eslint-disable-next-line no-unused-vars
   const [searchValue, setSearchValue] = useState('');
 
   return (
