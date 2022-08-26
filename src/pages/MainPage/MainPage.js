@@ -8,6 +8,7 @@ import Emergency from '../../components/emergency/emergency';
 import ReadMore from '../../components/emergency/readMore';
 import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage';
 import Accordion from '../../components/accordion/accordion';
+import Logo from '../../components/Logo/Logo';
 
 const MainPage = function () {
   const [searchValue, setSearchValue] = useState('');
@@ -16,6 +17,7 @@ const MainPage = function () {
     <>
       <div className={styles.bgContainer}>
         <Header setSearchValue={setSearchValue} />
+        <Logo />
         <Accordion />
         <Routes>
           <Route path="/" exact element={<Emergency />} />
