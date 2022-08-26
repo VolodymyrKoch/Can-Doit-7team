@@ -28,10 +28,10 @@ const ReadMore = ({emergency}) => {
                       
                             <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyleShadow}`}>
                                 <h1 className={`${style.ceTitle} ${style.ceTitleH1}`}>
-                                    <Link to="/" className={style.activeH1}>{element.title}</Link>
+                                    <Link to="/emergency" className={style.activeH1}>{element.title}</Link>
                                 </h1>
                                 <h2 className={style.ceTitle}>
-                                      <Link to="/"  className={`${style.notActive} ${style.fontColorBlack }`}>Ваші дії</Link> 
+                                      <Link to="/emergency"  className={`${style.notActive} ${style.fontColorBlack }`}>Ваші дії</Link> 
                                 </h2>
 
                                     <TodoList element={element} className={style.visible}/>
@@ -55,7 +55,7 @@ const ReadMore = ({emergency}) => {
                         
                         <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyleShadow}`}> 
                             <div className={style.ceBtn}>
-                                <Link to="/" className={style.activeH1}> 
+                                <Link to="/emergency" className={style.activeH1}> 
                                     <p className={`${style.active} ${style.ceBtnLink} ${style.notActiveDesktop}` }>Докладніше</p>
                                 </Link>
                             </div>

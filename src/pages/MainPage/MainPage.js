@@ -34,11 +34,18 @@ const MainPage = function () {
           <FirstComponent />
 
         <Routes>
-          <Route path="/" element={
-              <Emergency  emergency={emergency}/>
-          } />
-
-          <Route path="/readMore" element={<ReadMore emergency={emergency} />} />
+          <Route 
+              path="/" 
+              element={ <MainPage/> } 
+          />
+          <Route 
+              path="/emergency"   
+              element={ <Emergency  emergency={emergency}/> }
+          />
+          <Route 
+              path="/emergency/readMore" 
+              element={<ReadMore emergency={emergency} />} 
+          />
           <Route
             path="/alarmingSuitcasePage"
             element={<AlarmingSuitcasePage />}

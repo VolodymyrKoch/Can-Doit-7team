@@ -38,7 +38,7 @@ const Emergency = ({emergency}) => {
                           <TodoList element={element}/>
     
                           <div className={`${style.ceBtn} ${style.visibleLg}`}>
-                            <Link to="/readMore"  className={` ${style.notActive}  ${style.ceBtnLink} ${style.notActiveDesktop}`}>Докладніше</Link> 
+                            <Link to="/emergency/readMore"  className={` ${style.notActive}  ${style.ceBtnLink} ${style.notActiveDesktop}`}>Докладніше</Link> 
                           </div>
                       </section>
   
@@ -60,7 +60,7 @@ const Emergency = ({emergency}) => {
             <hr className={style.ceHr}/>
 
             <div className={`${style.ceBtn} ${style.hiddenLg}`}>
-                <Link to="/readMore"  className={` ${style.notActive}  ${style.ceBtnLink} ${style.notActiveDesktop}`}>Докладніше</Link> 
+                <Link to="/emergency/readMore"  className={` ${style.notActive}  ${style.ceBtnLink} ${style.notActiveDesktop}`}>Докладніше</Link> 
             </div>
          </div>
         </div>

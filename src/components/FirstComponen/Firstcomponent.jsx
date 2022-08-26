@@ -8,7 +8,7 @@ const FirstComponent = props => {
   return (
     <>
       <div className="size">
-          <Link to="/" >First Component</Link>
+          <Link to="/emergency" >First Component</Link>
       </div>
       {/* <div className={styles.size}>First Componen</div> */}
     </>
