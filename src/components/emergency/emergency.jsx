@@ -1,8 +1,9 @@
-import style from'./emergency.module.css';
+
+import React from 'react';
+import style from './emergency.module.css';
 import { Link } from 'react-router-dom';
 import TodoList from "./todoList";
 import ForbiddenList from "./forbiddenList";
-
 
 
 const Emergency = ({emergency}) => {
@@ -63,11 +64,12 @@ const Emergency = ({emergency}) => {
                 <Link to="/emergency/readMore"  className={` ${style.notActive}  ${style.ceBtnLink} ${style.notActiveDesktop}`}>Докладніше</Link> 
             </div>
          </div>
+
         </div>
-    </div>
-
-
-    )
+      </div>
+  );
 };
 
+
 export default Emergency;
+

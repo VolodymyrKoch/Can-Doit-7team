@@ -9,7 +9,7 @@ const TodoList = ({element}) => {
              <li key={ index}>
                 <span  className={style.iconItem} role="img" >
                   
-                  <img className={style.visibleLg}  src={item.image} alt={item.description} />
+                  <img className={style.visibleLg} style={{width:"100%"}} src={item.image} alt={item.description} />
 
                 </span>
                 <span  className={style.textItem}>{item.description} </span>

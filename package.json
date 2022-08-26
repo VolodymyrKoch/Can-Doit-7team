@@ -12,6 +12,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-speech-recognition": "^3.9.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -41,7 +42,8 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.21.0",
-    "prettier": "^2.7.1"
+    "@types/react-speech-recognition": "^3.9.0",
+    "prettier": "^2.7.1",
+    "prop-types": "^15.8.1"
   }
 }

@@ -7,6 +7,7 @@ import ReadMoreDetail from "./readMoreDetail";
 
 
 
+
 const ReadMore = ({emergency}) => {
 
   return (
@@ -21,6 +22,7 @@ const ReadMore = ({emergency}) => {
                   <li><span aria-current="page">Знайшли вибухонебезпечні чи підозрілі предмети</span></li>
               </ul>
             </nav>
+
 
                {emergency.map( (element, id) => (
                   <div key={id}>
