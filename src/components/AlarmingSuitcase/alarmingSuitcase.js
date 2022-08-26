@@ -4,6 +4,8 @@ import styles from './alarmingSuitcase.module.css';
 
 const AlarmingSuitcase = function () {
   const [data, setData] = useState([]);
+  const [selected, setSelected] = useState([]);
+  // console.log('selected:', selected);
 
   const getData = () => {
     fetch('data/alarmingSuitcase.json', {
@@ -26,6 +28,28 @@ const AlarmingSuitcase = function () {
     getData();
   }, []);
 
+  function handleInputChange(event) {
+    console.log('event.target', event.target.checked);
+
+    const target = event.target;
+    const ind = selected.indexOf(target.value);
+    console.log('ind', ind);
+
+    if (target.checked === false && ind !== -1) {
+      const copySelected = selected;
+      const delEl = copySelected.splice(ind, 1);
+      setSelected(copySelected);
+    }
+    if (target.checked === true && ind === -1) {
+      setSelected([...selected, target.value]);
+    } else {
+      // setSelected(selected);
+      // console.log('selected-2:', selected);
+      return;
+    }
+    // const name = target.name;
+  }
+
   return (
     <>
       <section className={styles.section}>
@@ -42,14 +66,20 @@ const AlarmingSuitcase = function () {
               <li key={id} className={styles.productItem}>
                 <h3 className={styles.productTitle}>{el.title}</h3>
                 <p className={styles.productDescription}>{el.description}</p>
-                <ul className={styles.subjectList}>
+                <form className={styles.subjectList}>
                   {/* subjectList */}
                   {el.subjectList.map((subjectEl, subjectId) => (
-                    <li key={subjectId} className={styles.subjectItem}>
-                      {subjectEl}
-                    </li>
+                    <label key={subjectId} className={styles.subjectItem}>
+                      <input
+                        type="checkbox"
+                        value={subjectEl}
+                        name={el.title}
+                        onChange={handleInputChange}
+                      />
+                      <p className={styles.subjectEl}>{subjectEl}</p>
+                    </label>
                   ))}
-                </ul>
+                </form>
               </li>
               // console.log('el.title:', el.title)
             ))}
