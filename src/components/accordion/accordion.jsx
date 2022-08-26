@@ -2,7 +2,8 @@ import React from 'react';
 
 import style from'./accordion.module.css';
 // import styles from './accordion.css';
-const Accordion = props => {
+const Accordion = (props) => {
+	
   return (
   <>
     <div className={style.container}>
@@ -21,7 +22,7 @@ const Accordion = props => {
 							<details><summary>Знайшли вибухо-небезпечні чи підозрілі предмети</summary></details>
 							<details><summary>Обстріл</summary></details>
 							<details><summary>Завал в будинку</summary></details>
-						</div>    
+						</div>
 					</details>
 				</div>
 			</details>

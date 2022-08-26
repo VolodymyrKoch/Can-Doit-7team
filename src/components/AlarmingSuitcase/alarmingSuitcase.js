@@ -37,7 +37,7 @@ const AlarmingSuitcase = function () {
 
     if (target.checked === false && ind !== -1) {
       const copySelected = selected;
-      const delEl = copySelected.splice(ind, 1);
+      copySelected.splice(ind, 1);
       setSelected(copySelected);
     }
     if (target.checked === true && ind === -1) {

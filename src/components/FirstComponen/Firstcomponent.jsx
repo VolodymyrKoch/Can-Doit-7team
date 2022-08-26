@@ -3,8 +3,7 @@ import React from 'react';
 import './FirstComponen.css';
 // import styles from './FirstComponen.css';
 
-const FirstComponent = (props) => {
-  // console.log(props);
+const FirstComponent = props => {
   return (
     <>
       <div className="size">First Componen</div>
