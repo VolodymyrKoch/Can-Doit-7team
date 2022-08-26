@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
-const ReadMore = props => {
+const ReadMore = () => {
 
   return (
     <div>
@@ -21,7 +21,7 @@ const ReadMore = props => {
             <div className={style.ceContent}>
             <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyle}`}>
                     <h2 className={style.ceTitle}>
-                       <Link to="/"  className={`${style.notActive} ${style.fontColorBlack }`}>Ваші дії</Link> 
+                       <Link to="/"  className={`${style.notActive} ${style.fontColorBlack }`}>Ваші дії</Link>
                     </h2>
                     <ul className={`${style.ceTodoItem} ${style.visible}`}>
                         <li><span className={style.iconItem}></span><span className={style.textItem}>Повідомте 101 або 102</span></li>
@@ -50,7 +50,7 @@ const ReadMore = props => {
 
             </div>
             <hr className={style.ceHr}/>
-            <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyle}`}> 
+            <section className={`${style.ceTodo} ${style.margin1Rem} ${style.sectionDesktopStyle}`}>
                 <div className={style.ceBtn}>
                     <p className={`${style.ceBtnLink} ${style.active} ${style.notActiveDesktop}` }>Докладніше</p>
                 </div>
