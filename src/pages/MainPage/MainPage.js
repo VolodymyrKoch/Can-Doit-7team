@@ -6,6 +6,7 @@ import styles from './MainPage.module.css';
 import Emergency from '../../components/emergency/emergency';
 import ReadMore from '../../components/emergency/readMore';
 import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage';
+import Accordion from '../../components/accordion/accordion';
 
 const MainPage = function () {
   return (
@@ -13,6 +14,8 @@ const MainPage = function () {
       <div className={styles.bgContainer}>
         <Header />
         <FirstComponent />
+        
+        <Accordion />
 
         <Routes>
           <Route path="/" exact element={<Emergency />} />

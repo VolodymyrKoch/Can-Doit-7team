@@ -1,0 +1,76 @@
+:root {
+	--body-bg: rgba(17, 24, 39, 1);
+	--body-color: rgba(17, 24, 39, 1);
+	--collapse-bg: rgba(255, 255, 255, 0.1);
+	--collapse-color: #1a1a1a;
+	--collapse-line-color: #acacde;
+	--collapse-icon-color: #b8336a;
+	--collapse-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+details {
+	background: var(--collapse-bg);
+	color: azure;
+	border-radius: 10px;
+	margin-bottom: 24px;
+	box-shadow: var(--collapse-box-shadow);
+	box-sizing: border-box;
+}
+
+
+summary {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	cursor: pointer;
+	list-style-type: none;
+	color: azure;
+	box-sizing: border-box;
+}
+
+summary,
+.information {
+	padding: 1rem;
+}
+
+.information {
+	border-top: 1px solid var(--collapse-line-color);
+}
+
+summary .icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	transition: transform 0.26s;
+	color: var(--collapse-icon-color);
+	box-sizing: border-box;
+}
+
+.container {
+	color: var(--body-color);
+	background: var(--body-bg);
+	margin: 0 auto;
+	padding: 0;
+	width: 383px;
+	padding: 20px;
+	box-sizing: border-box;
+	}
+
+.iconItem1 {
+	width: 40px;
+	height: 40px;
+	background: center no-repeat url('../../image/icon/bookbook.png');
+	background-size: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.iconItem2 {
+	width: 40px;
+	height: 40px;
+	background:center no-repeat url('../../image/icon/book2.png');
+	background-size: auto;
+	margin: 0;
+	padding: 0;
+}
