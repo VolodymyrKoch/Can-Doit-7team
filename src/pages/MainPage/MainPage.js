@@ -9,15 +9,15 @@ import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage';
 import Accordion from '../../components/accordion/accordion';
 
 const MainPage = function () {
+  // eslint-disable-next-line no-unused-vars
+  const [searchValue, setSearchValue] = useState("");
+
   return (
     <>
       <div className={styles.bgContainer}>
-        <Header />
-        <FirstComponent />
-        
+        <Header setSearchValue={setSearchValue}/>
         <Accordion />
-
-        <Routes>
+          <Routes>
           <Route path="/" exact element={<Emergency />} />
           <Route path="/readMore" element={<ReadMore />} />
           <Route
