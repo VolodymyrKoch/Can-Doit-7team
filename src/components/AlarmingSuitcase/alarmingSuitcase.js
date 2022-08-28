@@ -55,7 +55,8 @@ const AlarmingSuitcase = function ({ selectedList }) {
 
       console.log('checked === true:');
     } else {
-      selectedList(selected);
+      setSelected(selected);
+      // selectedList(selected);
       console.log('checked === ', target.checked, '//', 'ind:', ind);
 
       return;
