@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react';
 
 import styles from './alarmingSuitcase.module.css';
 
-const AlarmingSuitcase = function () {
+const AlarmingSuitcase = function ({ selectedList }) {
   const [data, setData] = useState([]);
   const [selected, setSelected] = useState([]);
-  // console.log('selected:', selected);
+  useEffect(() => {
+    selectedList(selected);
+  }, [selected, selectedList]);
 
-  const getData = () => {
+  console.log('selected:', selected);
+
+  function getData() {
     fetch('data/alarmingSuitcase.json', {
       headers: {
         'Content-Type': 'application/json',
@@ -23,30 +27,41 @@ const AlarmingSuitcase = function () {
         // console.log('myJson:', myJson);
         // console.log('data:', data);
       });
-  };
+  }
   useEffect(() => {
     getData();
+    //  selectedList(selected);
   }, []);
 
   function handleInputChange(event) {
-    console.log('event.target', event.target.checked);
+    // console.log('event.target', event.target.checked);
 
     const target = event.target;
     const ind = selected.indexOf(target.value);
-    console.log('ind', ind);
+    // console.log('ind', ind);
 
     if (target.checked === false && ind !== -1) {
-      const copySelected = selected;
-      copySelected.splice(ind, 1);
-      setSelected(copySelected);
+      // const copySelected = selected;
+      // copySelected.splice(ind, 1);
+      // setSelected(copySelected);
+
+      selected.splice(ind, 1);
+      setSelected(selected);
+
+      // console.log('checked === false:');
     }
     if (target.checked === true && ind === -1) {
       setSelected([...selected, target.value]);
+
+      console.log('checked === true:');
     } else {
-      // setSelected(selected);
-      // console.log('selected-2:', selected);
+      setSelected(selected);
+      // selectedList(selected);
+      console.log('checked === ', target.checked, '//', 'ind:', ind);
+
       return;
     }
+
     // const name = target.name;
   }
 
@@ -67,7 +82,6 @@ const AlarmingSuitcase = function () {
                 <h3 className={styles.productTitle}>{el.title}</h3>
                 <p className={styles.productDescription}>{el.description}</p>
                 <form className={styles.subjectList}>
-                  {/* subjectList */}
                   {el.subjectList.map((subjectEl, subjectId) => (
                     <label key={subjectId} className={styles.subjectItem}>
                       <input
@@ -81,7 +95,6 @@ const AlarmingSuitcase = function () {
                   ))}
                 </form>
               </li>
-              // console.log('el.title:', el.title)
             ))}
           </ul>
         </div>
