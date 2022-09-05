@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import Header from '../../components/Header/Header.jsx';
-
-// import FirstComponent from '../../components/FirstComponen/Firstcomponent.jsx';
 import { Routes, Route } from 'react-router-dom';
 import styles from './MainPage.module.css';
 import Emergency from '../../components/emergency/emergency';
@@ -9,6 +7,7 @@ import ReadMore from '../../components/emergency/readMore';
 import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage';
 import Accordion from '../../components/accordion/accordion';
 import Logo from '../../components/Logo/Logo';
+import { SearchContext } from '../../shared/search-context';
 
 const MainPage = function () {
   const [searchValue, setSearchValue] = useState('');
@@ -16,6 +15,7 @@ const MainPage = function () {
   return (
     <>
       <div className={styles.bgContainer}>
+        <SearchContext.Provider value={searchValue}>
         <Header setSearchValue={setSearchValue} />
         <Logo />
         <Accordion />
@@ -27,7 +27,9 @@ const MainPage = function () {
             element={<AlarmingSuitcasePage />}
           />
         </Routes>
+        </SearchContext.Provider>
       </div>
+
     </>
   );
 };
