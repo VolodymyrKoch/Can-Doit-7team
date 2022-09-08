@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import style from './emergency.module.css';
 import { Link } from 'react-router-dom';
+import { SearchContext } from '../../shared/search-context';
 
 const Emergency = () => {
+  const  searchValue = useContext (SearchContext);
+
   return (
     <div>
       <div className={style.container}>
