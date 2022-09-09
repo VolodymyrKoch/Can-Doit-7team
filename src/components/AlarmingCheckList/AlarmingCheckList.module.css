@@ -28,7 +28,21 @@
     font-size: 18px;
     line-height: 1.37;
   } */
-  .container .orderedList{
-    list-style: auto;
+  .orderedList{
+    /* list-style-type: auto !important; */
+    margin-bottom: 40px;
+  }
+  .itemNumber{
+    margin-right: 5px;
+  }
+  .pdf{
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--btnDesktop);
+  }
+  .pdf > p{
+    margin-right: 10px;
   }
 }
