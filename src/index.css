@@ -12,8 +12,9 @@ font-family: 'Roboto', sans-serif; */
   --blackFont: #000000;
   --btnDesktop:#5048E5;
   --ceForbiddenTodoTitleColorDesktop: #FF2800;
+  --subject: #111827;
+  --subjectActive: rgba(17, 17, 136, 0.8);
 }
-
 
 html {
   box-sizing: border-box;
@@ -37,17 +38,17 @@ a {
   text-decoration: none;
   outline: none;
 }
-img {
-  display: block;
-  width: 100%;
-}
+/*img {*/
+/*  display: block;*/
+/*  width: 100%;*/
+/*}*/
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   letter-spacing: 1px;
 }
 body {
   margin: 0;
-  font-family: 'Gotham Pro';
+  font-family: 'Inter';
   font-weight: 700;
   scrollbar-color: #264061 #f0f1f3;
   scrollbar-width: 6px;

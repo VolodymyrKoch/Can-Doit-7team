@@ -79,7 +79,7 @@ display: none;
   min-height: 2rem;
   margin: 0 0 0 2rem;
   background: center  no-repeat url('../../image/icon/notification2.png');
-  
+
 }
 
 .textItem {
@@ -115,7 +115,7 @@ display: none;
   color:var(--btnDesktop);
   font-size: 1.125rem;
   font-weight: 600;
-} 
+}
 .forbiddenTodoTitle {
   color: var(--ceForbiddenTodoTitleColorDesktop);
 }
@@ -145,7 +145,7 @@ display: none;
 
 @media all and (max-width: 768px) {
   /* component ms-divice */
-  
+
 .container {
   width:100%;
   margin: 1rem auto;
@@ -212,8 +212,12 @@ display: none;
   flex-direction: row;
   font-size: 1rem;
   align-items: center;
+
+}
+.ce-todo-item li {
   margin: 0;
-  justify-content: flex-start; 
+  justify-content: flex-start;
+
 }
 
 .iconItem {
@@ -270,7 +274,8 @@ display: none;
   margin: 0;
   padding: 0;
 }
-  
+
+
 .ceBreadcrumb li:not(:last-child)::after {
   display: inline-block;
   margin: 0 .2rem;
@@ -290,7 +295,7 @@ display: none;
   color:var(--blackOpacity-40);
   font-size: 1.125rem;
   font-weight: 600;
-} 
+}
 /* end */
   #componentEmergency {
     margin:0 0 0 10%;
@@ -304,7 +309,7 @@ display: none;
     width: calc(100% - 80px);
     margin: 0 ;
     padding: 0 10px 0;
-  
+
   }
   .textItemReadMore {
     width: 100%;
@@ -313,7 +318,7 @@ display: none;
   }
   .ceForbiddenTodoItem .textItem {
     width: calc(100% - 40px);
-  
+
   }
   .ceForbiddenTodoItem .iconItem {
     background:left no-repeat url('../../image/icon/notification.png');
