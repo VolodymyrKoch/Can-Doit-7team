@@ -1,0 +1,45 @@
+.layoutMain {
+  margin: 0 auto;
+  width:1320px;
+  box-sizing: border-box;
+}
+.pageContainer {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  grid-gap:15px;
+  margin: 0 40px;
+}
+.layoutContant {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: var( --whiteColor);
+  padding: 0 10px;
+}
+.epAside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+	background: var(--body-bg);
+
+}
+
+@media all and (max-width:768px) {
+  .layoutMain {
+    width:100%;
+  }
+  .pageContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  .layoutContant {
+    background: var(--body-bg);
+    border-radius: 0 0 29px 29px;
+
+  }
+  
+}
+

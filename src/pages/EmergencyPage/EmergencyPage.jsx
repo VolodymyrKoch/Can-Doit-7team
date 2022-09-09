@@ -1,15 +1,16 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import Header from "../../components/Header/Header";
-import Accordion from "../../components/accordion/accordion";
+import React, { useState, useEffect } from "react";
 import Emergency from "../../components/emergency/emergency";
 import style from "./EmergencyPage.module.css";
+import Navigation from '../../shared/Navigation/Navigation';
+import Header from "../../components/Header/Header";
 
-const EmergencyPage = (props) => {
+const EmergencyPage = ({emergencyItem}, ...props) => {
+
+  // console.log("emergencyItem",emergencyItem,props)
 
   const [emergency, setEmergency] = useState([]);
   const [searchValue, setSearchValue] = useState('');
- 
+   
 
   async function fetchEmergency () {
     const response = await fetch('data/emergency.json', {
@@ -29,21 +30,14 @@ const EmergencyPage = (props) => {
  
   return (
 
-    <div className={style.main}>
-        <div className={style.container}>
-            <div className={style.aside}>
+    <div className={style.pageMain}>
 
-                <Accordion />
+             <Header setSearchValue={setSearchValue} />
+                
+                <Navigation/>
 
-            </div>
-            <div className={style.mainContent}>
+               <Emergency  emergency={emergency}/>
 
-                <Header setSearchValue={setSearchValue} />
-
-                <Emergency  emergency={emergency}/>
-
-            </div>
-        </div>
     </div>
 
    

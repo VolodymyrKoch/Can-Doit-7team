@@ -7,7 +7,8 @@ font-family: 'Roboto', sans-serif; */
 :root {
   --backgroundBlack: #111827;
   --whiteColor: #FFFFFF;
-  --blackOpacity-40: rgb(163, 163, 163);
+  --blackOpacity-40: rgba(0, 0, 0, 0.4);
+  --blackOpacity-80: rgba(0, 0, 0, 0.8);
   --blackFont: #000000;
   --btnDesktop:#5048E5;
   --ceForbiddenTodoTitleColorDesktop: #FF2800;
@@ -68,11 +69,11 @@ body {
   height: 40px;
 }
 
-.container {
+/* .container {
   width: 320px;
   padding: 0 15px;
   margin: 0 auto;
-}
+} */
 
 .react-datepicker-wrapper {
   position: relative;
