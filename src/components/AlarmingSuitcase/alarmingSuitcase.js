@@ -81,8 +81,9 @@ const AlarmingSuitcase = function ({ selectedList }) {
               <li key={id} className={styles.productItem}>
                 <h3 className={styles.productTitle}>{el.title}</h3>
                 <p className={styles.productDescription}>{el.description}</p>
-                <form className={styles.subjectList}
-                // onSubmit={submitHandler}
+                <form
+                  className={styles.subjectList}
+                  // onSubmit={submitHandler}
                 >
                   {el.subjectList.map((subjectEl, subjectId) => (
                     <label key={subjectId} className={styles.subjectItem}>
