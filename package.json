@@ -23,7 +23,12 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -39,6 +44,7 @@
   "devDependencies": {
     "prettier": "^2.7.1",
     "@types/react-speech-recognition": "^3.9.0",
-    "prop-types": "^15.8.1"
+    "prop-types": "^15.8.1",
+    "eslint": "^8.21.0"
   }
 }
