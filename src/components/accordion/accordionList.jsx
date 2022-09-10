@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import style from'./accordion.module.css';
 import AccordionItem from "./accordionItem";
 
-const AccordionList = ({data, onClick}) => {
+const AccordionList = ({data}) => {
 
 
   return (

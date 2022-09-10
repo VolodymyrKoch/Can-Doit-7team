@@ -1,5 +1,8 @@
 
+import React, { useContext } from 'react';
 import style from './emergency.module.css';
+import { SearchContext } from '../../shared/search-context';
+
 import TodoList from "./todoList";
 import ForbiddenList from "./forbiddenList";
 import MyButton from '../../shared/myButton/myButton';
@@ -7,8 +10,9 @@ import ReadMoreDetail from './readMoreDetail';
 
 
 const Emergency = ({emergency}) => {
-
+  const  searchValue = useContext (SearchContext);
  
+
   return (
 
     <div>
