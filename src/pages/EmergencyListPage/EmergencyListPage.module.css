@@ -1,0 +1,32 @@
+.pageMain {
+  margin: 0 auto;
+  width:800px;
+  box-sizing: border-box; 
+  background: var(--whiteColor);
+  
+}
+.visibleLg{
+  display: block;
+}
+.imageEmergency{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.imageContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 36px;
+}
+
+@media all and (max-width:768px) {
+  .pageMain {
+    background: var(--body-bg);
+    width:100%;
+
+  }
+  .visibleLg{
+    display: none;
+  }
+}
