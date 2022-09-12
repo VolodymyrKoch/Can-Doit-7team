@@ -1,47 +1,38 @@
-import React, { useState, useEffect } from "react";
-import Emergency from "../../components/emergency/emergency";
-import style from "./EmergencyPage.module.css";
+import React, { useState, useEffect } from 'react';
+import Emergency from '../../components/emergency/emergency';
+import style from './EmergencyPage.module.css';
 import Navigation from '../../shared/Navigation/Navigation';
-import Header from "../../components/Header/Header";
+import Header from '../../components/Header/Header';
 
-const EmergencyPage = ({emergencyItem}, ...props) => {
-
+const EmergencyPage = ({ emergencyItem }, ...props) => {
   // console.log("emergencyItem",emergencyItem,props)
 
   const [emergency, setEmergency] = useState([]);
   const [searchValue, setSearchValue] = useState('');
-   
 
-  async function fetchEmergency () {
+  async function fetchEmergency() {
     const response = await fetch('data/emergency.json', {
-     headers: {
-       Accept: 'application/json'
-     }
-   })
- 
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
     const data = await response.json();
-     setEmergency(data);
-  
+    setEmergency(data);
   }
-   useEffect(() => {
-     fetchEmergency();
- }, []);
+  useEffect(() => {
+    fetchEmergency();
+  }, []);
 
- 
   return (
-
     <div className={style.pageMain}>
+      <Header setSearchValue={setSearchValue} />
 
-             <Header setSearchValue={setSearchValue} />
-                
-                <Navigation/>
+      <Navigation />
 
-               <Emergency  emergency={emergency}/>
-
+      <Emergency emergency={emergency} />
     </div>
-
-   
-  )
-}
+  );
+};
 
 export default EmergencyPage;
