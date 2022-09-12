@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 // import React, { useState } from 'react';
 // import { Routes, Route, Link } from 'react-router-dom';
 
-// import Header from '../../components/Header/Header.jsx';
+import Navigation from '../../shared/Navigation/Navigation';
+import Header from '../../components/Header/Header.jsx';
 import AlarmingSuitcase from '../../components/AlarmingSuitcase/AlarmingSuitcase';
 import AlarmingCheckList from '../../components/AlarmingCheckList/AlarmingCheckList.jsx';
 import styles from './AlarmingSuitcasePage.module.css';
@@ -18,9 +19,13 @@ const AlarmingSuitcasePage = function () {
 
   return (
     <>
-      <div className={styles.container}>
-        <AlarmingSuitcase selectedList={checkedList} />
-        <AlarmingCheckList selectedList={checked} />
+      <div className={styles.alarmingPage}>
+        <Header />
+        <Navigation />
+        <div className={styles.alarming}>
+          <AlarmingSuitcase selectedList={checkedList} />
+          <AlarmingCheckList selectedList={checked} />
+        </div>
       </div>
     </>
   );

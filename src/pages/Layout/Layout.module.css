@@ -1,12 +1,15 @@
 .layoutMain {
   margin: 0 auto;
-  width:1320px;
+  /* width:1320px; */
+  width: 100%;
   box-sizing: border-box;
 }
 .pageContainer {
+  /* max-width: 380px; */
+ /* min-width: max-content; */
   display: grid;
-  grid-template-columns: 380px 1fr;
-  grid-gap:15px;
+  grid-template-columns: 0.5fr 1.8fr;
+  /* grid-gap:15px; */
   margin: 0 40px;
 }
 .layoutContant {
@@ -18,6 +21,7 @@
   padding: 0 10px;
 }
 .epAside {
+  max-width: max-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -34,12 +38,16 @@
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 auto;
+     grid-gap:15px;
   }
   .layoutContant {
     background: var(--body-bg);
     border-radius: 0 0 29px 29px;
-
   }
-  
+  .epAside {
+    /* width: 100%; */
+    max-width: none;
+  }
+
 }
 

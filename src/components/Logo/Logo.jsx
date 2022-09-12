@@ -1,16 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './Logo.module.css';
 import logoIcon from '../../image/icon/you-прозорий.png';
 
-const Logo = function() {
+const Logo = function () {
   return (
     <>
       <div className={styles.colorBackground}>
         <div className={styles.rectangleTop}>
           <div className={styles.triangle}>
             <div className={styles.topPart}>
-              <div className={styles.imageYouCanDoIt}><img src={logoIcon} alt=""/></div>
+              <Link to="/">
+                <div className={styles.imageYouCanDoIt}>
+                  <img src={logoIcon} alt="" />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -18,6 +23,5 @@ const Logo = function() {
       </div>
     </>
   );
-
 };
 export default Logo;
