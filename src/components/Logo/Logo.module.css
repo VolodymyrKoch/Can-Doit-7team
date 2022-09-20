@@ -1,0 +1,41 @@
+.colorBackground{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rectangleTop{
+    width: 100%;
+    height: 82px;
+    background: #FFFFFF;
+
+}
+.triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 112px solid transparent;
+    border-bottom: 84px solid #111827;
+}
+.rectangleBottom{
+
+    width: 100%;
+    height: 100px;
+    background: #111827;
+}
+
+.imageYouCanDoIt{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* margin-left: 42px; */
+}
+
+.topPart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 96px;
+
+}

@@ -1,17 +1,19 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat&family=Roboto&display=swap');
 /*font-family: 'Inter', sans-serif;
  font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
 :root {
   --backgroundBlack: #111827;
-  --backgroundWhite: #FFFFFF;
-  --blackOpacity-40: rgb(163, 163, 163);
-  --whiteFont: #ffffff;
+  --whiteColor: #FFFFFF;
+  --blackOpacity-40: rgba(0, 0, 0, 0.4);
+  --blackOpacity-80: rgba(0, 0, 0, 0.8);
   --blackFont: #000000;
   --btnDesktop:#5048E5;
   --ceForbiddenTodoTitleColorDesktop: #FF2800;
+  --sectionShadowColor: rgba(255, 40, 0, 0.25);
+  --colorHr: #E6E8F0;
   --subject: #111827;
   --subjectActive: rgba(17, 17, 136, 0.8);
 }
@@ -38,10 +40,10 @@ a {
   text-decoration: none;
   outline: none;
 }
-img {
-  display: block;
-  width: 100%;
-}
+/*img {*/
+/*  display: block;*/
+/*  width: 100%;*/
+/*}*/
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   letter-spacing: 1px;
@@ -67,11 +69,11 @@ body {
   height: 40px;
 }
 
-.container {
+/* .container {
   width: 320px;
   padding: 0 15px;
   margin: 0 auto;
-}
+} */
 
 .react-datepicker-wrapper {
   position: relative;

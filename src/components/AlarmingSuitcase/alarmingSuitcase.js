@@ -2,10 +2,16 @@ import React, { useState, useEffect } from 'react';
 
 import styles from './alarmingSuitcase.module.css';
 
-const AlarmingSuitcase = function () {
+const AlarmingSuitcase = function ({ selectedList }) {
   const [data, setData] = useState([]);
+  const [selected, setSelected] = useState([]);
+  useEffect(() => {
+    selectedList(selected);
+  }, [selected, selectedList]);
 
-  const getData = () => {
+  // console.log('selected:', selected);
+
+  function getData() {
     fetch('data/alarmingSuitcase.json', {
       headers: {
         'Content-Type': 'application/json',
@@ -21,10 +27,39 @@ const AlarmingSuitcase = function () {
         // console.log('myJson:', myJson);
         // console.log('data:', data);
       });
-  };
+  }
   useEffect(() => {
     getData();
+    //  selectedList(selected);
   }, []);
+  function arrayRemoveElement(array, index) {
+    return [...array.slice(0, index), ...array.slice(index + 1)];
+  }
+
+  function handleInputChange(event) {
+    // console.log('event.target', event.target.checked);
+
+    const target = event.target;
+    const ind = selected.indexOf(target.value);
+    // console.log('ind', ind);
+
+    if (target.checked === false && ind !== -1) {
+      const newSelected = arrayRemoveElement(selected, ind);
+      // selected.splice(ind, 1);
+      setSelected(newSelected);
+
+      // console.log('checked === false:');
+    }
+    if (target.checked === true && ind === -1) {
+      setSelected([...selected, target.value]);
+
+      // console.log('checked === true:');
+    } else {
+      return;
+    }
+
+    // const name = target.name;
+  }
 
   return (
     <>
@@ -42,16 +77,23 @@ const AlarmingSuitcase = function () {
               <li key={id} className={styles.productItem}>
                 <h3 className={styles.productTitle}>{el.title}</h3>
                 <p className={styles.productDescription}>{el.description}</p>
-                <ul className={styles.subjectList}>
-                  {/* subjectList */}
+                <form
+                  className={styles.subjectList}
+                  // onSubmit={submitHandler}
+                >
                   {el.subjectList.map((subjectEl, subjectId) => (
-                    <li key={subjectId} className={styles.subjectItem}>
-                      {subjectEl}
-                    </li>
+                    <label key={subjectId} className={styles.subjectItem}>
+                      <input
+                        type="checkbox"
+                        value={subjectEl}
+                        name={el.title}
+                        onChange={handleInputChange}
+                      />
+                      <p className={styles.subjectEl}>{subjectEl}</p>
+                    </label>
                   ))}
-                </ul>
+                </form>
               </li>
-              // console.log('el.title:', el.title)
             ))}
           </ul>
         </div>
