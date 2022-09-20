@@ -72,7 +72,7 @@
   width:2rem;
   min-height: 2rem;
   margin: 0 0 0 2rem;
-  background: center  no-repeat url('../../image/icon/notification2.png');
+  background: center  no-repeat url('../../image/icon/icon-forbidden.png');
 }
 .textItem {
   width: calc(100% - 80px);

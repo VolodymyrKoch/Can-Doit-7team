@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Emergency from '../../components/emergency/emergency';
+import Emergency from '../../components/Emergency/Emergency';
 import style from './EmergencyPage.module.css';
 import Navigation from '../../shared/Navigation/Navigation';
 import Header from '../../components/Header/Header';

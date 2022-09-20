@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import style from'./accordion.module.css';
+import style from'./Accordion.module.css';
 import { Link } from "react-router-dom";
 import EmergencyListPage from "../../pages/EmergencyListPage/EmergencyListPage";
 import SubItem from "./SubItem";

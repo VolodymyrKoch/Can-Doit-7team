@@ -1,17 +1,33 @@
 
-import React, { useContext } from 'react';
-import style from './emergency.module.css';
+import React, { useContext, useState } from 'react';
+import style from './Emergency.module.css';
 import { SearchContext } from '../../shared/search-context';
 
-import TodoList from "./todoList";
-import ForbiddenList from "./forbiddenList";
-import MyButton from '../../shared/myButton/myButton';
-import ReadMoreDetail from './readMoreDetail';
+import TodoList from "./TodoList";
+import ForbiddenList from "./ForbiddenList";
+import MyButton from '../../shared/MyButton/MyButton';
+import ReadMoreDetail from './ReadMoreDetail';
 
 
 const Emergency = ({emergency}) => {
+
+
   const  searchValue = useContext (SearchContext);
+  const [activeReadMore, setActiveReadMore] = useState(false)
+  const [activeTodoList, setActiveTodoList] = useState(true)
  
+
+  const setVisibleBlock = () => {
+    
+   
+   
+
+    setActiveTodoList(!activeTodoList)
+
+    console.log(activeTodoList)
+ 
+    
+  }
 
   return (
 
@@ -41,7 +57,7 @@ const Emergency = ({emergency}) => {
                           
                           </h2>
 
-                          <TodoList element={element}/>
+                          <TodoList element={element} activeTodoList={activeTodoList}/>
                           
                       </section>
   
@@ -51,7 +67,10 @@ const Emergency = ({emergency}) => {
 
                           <h2 className={`${style.ceTitle} ${style.forbiddenTodoTitle}`}> Заборонено  </h2>
 
-                          <ForbiddenList element={element}/>
+                          <ForbiddenList 
+                            element={element} 
+                            activeTodoList={activeTodoList} 
+                          />
 
                       </section>
                   </div> 
@@ -63,7 +82,7 @@ const Emergency = ({emergency}) => {
 
                         <div  className={` ${style.notActive}  ${style.ceBtnLink} ${style.notActiveDesktop}`}>
 
-                            <MyButton >Докладніше</MyButton>
+                            <MyButton onClick={setVisibleBlock}>Докладніше</MyButton>
 
                         </div>
 
@@ -76,11 +95,11 @@ const Emergency = ({emergency}) => {
 
                       <div className={style.containerBtn}>
 
-                        <MyButton  style={{color:"var(--whiteColor)"}}   >Докладніше</MyButton>
+                        <MyButton  style={{color:"var(--whiteColor)"}}  activeReadMore={activeReadMore} >Докладніше</MyButton>
 
                       </div>
 
-                      <ReadMoreDetail  element={element}  />
+                      <ReadMoreDetail  element={element}  activeReadMore={activeReadMore}/>
 
                   </section>
 
