@@ -1,0 +1,64 @@
+
+.ceBtn {
+  line-height: 1.2rem;
+  text-align: justify;
+  padding:10px 0.5rem;
+  margin: 0.5rem 0 0;
+  background: transparent;
+  border: none;
+  
+}
+.ceBtnLink {
+  padding: 10px 35px;
+  position: relative;
+  display: block;
+  text-align: right;
+}
+.ceBtnLink::before {
+  content: '';
+  position: absolute;
+  width:25px;
+  height: 25px;
+  top:50%;
+  transform: translateY(-50%);
+  right:0;
+  background: center no-repeat url('../../image/icon/Vector.png');
+}
+
+
+.notActiveDesktop {
+  color:var(--btnDesktop);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+@media all and (max-width: 768px) {
+  .cebtn {
+    color: var(--blackOpacity-40);
+    line-height: 1.2rem;
+    text-align: left;
+    padding:10px;
+    margin: 0.5rem 0 0 ;
+    
+  }
+  .ceBtnLink {
+    padding:  0.5rem;
+    position: relative;
+    display: block;
+    text-align: left;
+  }
+  .ceBtnLink::before {
+    display: none;
+  }
+  
+  .active {
+    color: var(--whiteColor);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+  .notActive, .fontColorBlack{
+    color:var(--blackOpacity-40);
+    font-size: 1.125rem;
+    font-weight: 600;
+  } 
+}

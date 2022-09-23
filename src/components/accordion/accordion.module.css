@@ -56,7 +56,9 @@ summary .icon {
 	padding: 20px;
 	box-sizing: border-box;
 	}
-
+.width100 {
+  width:100%;
+}
 .iconItem1 {
 	width: 40px;
 	height: 40px;
