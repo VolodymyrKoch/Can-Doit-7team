@@ -1,8 +1,7 @@
-import React from "react";
-import style from "./Emergency.module.css";
+import React from 'react';
+import style from './Emergency.module.css';
 
-const ReadMoreDetail = ({element}) => {
-
+const ReadMoreDetail = ({ element }) => {
   var decodeHTML = function (html) {
     var txt = document.createElement('textarea');
     txt.innerHTML = html;
@@ -10,12 +9,8 @@ const ReadMoreDetail = ({element}) => {
   };
 
   return (
-
-    
-        <div className={style.textItemReadMore}>
-            {decodeHTML(element.detail)}
-         </div>
-  )
+    <div className={style.textItemReadMore}>{decodeHTML(element.detail)}</div>
+  );
 };
 
 export default ReadMoreDetail;
