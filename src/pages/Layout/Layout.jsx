@@ -18,9 +18,17 @@ const Layout = () => {
     const dataArray = await response.json();
     setData(dataArray);
   }
+
   useEffect(() => {
     fetchEmergency();
   }, []);
+
+  // const emergencyTitles = function ({data}) {
+  //   console.log('data',data)
+  //   // return data.map(
+  //   //     ({id, title}) => ({[id] : title}))
+  // }
+  // emergencyTitles()
 
   //  const handleClick = (e) => {
   // setEmergencyItem(emergencyItem)

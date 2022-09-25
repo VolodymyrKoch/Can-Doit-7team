@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import style from './accordion.module.css';
+import style from './Accordion.module.css';
 import AccordionItem from './AccordionItem';
 
 const AccordionList = ({ data }) => {
@@ -15,14 +15,14 @@ const AccordionList = ({ data }) => {
             />
           </div>
         ))}
-        <Link to="/alarmingSuitcasePage">
+        <Link to="/EvacuationPage">
           <details>
             <summary>
               <span className={style.iconItem1}></span>Евакуація
             </summary>
           </details>
         </Link>
-        <Link to="/alarmingSuitcasePage">
+        <Link to="/AlarmingSuitcasePage">
           <details>
             <summary>
               <span className={style.iconItem1}></span>Тривожна валізка
