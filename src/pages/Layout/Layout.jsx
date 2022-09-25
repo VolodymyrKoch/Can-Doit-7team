@@ -25,11 +25,11 @@ const Layout = () => {
 
   // const emergencyTitles = function ({data}) {
   //   console.log('data',data)
-  //   // return data.map( 
+  //   // return data.map(
   //   //     ({id, title}) => ({[id] : title}))
   // }
   // emergencyTitles()
- 
+
   //  const handleClick = (e) => {
   // setEmergencyItem(emergencyItem)
   // console.log('emergencyItem', emergencyItem)

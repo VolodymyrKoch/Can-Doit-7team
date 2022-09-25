@@ -6,7 +6,7 @@ import { useState } from 'react';
 import {Layout} from '../Layout/Layout.jsx';
 import EmergencyListPage from '../EmergencyListPage/EmergencyListPage';
 import EmergencyPage from '../EmergencyPage/EmergencyPage';
-import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage';
+import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage.jsx';
 import AccordionList from '../../components/Accordion/AccordionList.jsx';
 import Header from '../../components/Header/Header.jsx';
 import Logo from '../../components/Logo/Logo';
