@@ -1,7 +1,7 @@
 import React from 'react';
 
-import style from './accordion.module.css';
-// import styles from './accordion.css';
+import style from './Accordion.module.css';
+// import styles from './Accordion.css';
 
 const Accordion = props => {
   return (

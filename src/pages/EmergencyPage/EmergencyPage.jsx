@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Emergency from '../../components/emergency/emergency';
+import Emergency from '../../components/Emergency/Emergency';
 import style from './EmergencyPage.module.css';
 import Navigation from '../../shared/Navigation/Navigation';
 import Header from '../../components/Header/Header';
@@ -26,9 +26,18 @@ const EmergencyPage = ({ emergencyItem }, ...props) => {
 
   return (
     <div className={style.pageMain}>
-      <Header setSearchValue={setSearchValue} />
+      
 
-      <Navigation />
+      {window.innerWidth >=768 ?
+
+        <> 
+          <Header setSearchValue={setSearchValue} />
+
+          <Navigation /> 
+        </> :
+
+           null
+      }
 
       <Emergency emergency={emergency} />
     </div>
