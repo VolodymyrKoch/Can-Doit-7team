@@ -32,6 +32,9 @@ const AlarmingSuitcase = function ({ selectedList }) {
     getData();
     //  selectedList(selected);
   }, []);
+  function arrayRemoveElement(array, index) {
+    return [...array.slice(0, index), ...array.slice(index + 1)];
+  }
 
   function handleInputChange(event) {
     // console.log('event.target', event.target.checked);
@@ -41,24 +44,17 @@ const AlarmingSuitcase = function ({ selectedList }) {
     // console.log('ind', ind);
 
     if (target.checked === false && ind !== -1) {
-      // const copySelected = selected;
-      // copySelected.splice(ind, 1);
-      // setSelected(copySelected);
-
-      selected.splice(ind, 1);
-      setSelected(selected);
+      const newSelected = arrayRemoveElement(selected, ind);
+      // selected.splice(ind, 1);
+      setSelected(newSelected);
 
       // console.log('checked === false:');
     }
     if (target.checked === true && ind === -1) {
       setSelected([...selected, target.value]);
 
-      console.log('checked === true:');
+      // console.log('checked === true:');
     } else {
-      // setSelected(selected);
-      // selectedList(selected);
-      // console.log('checked === ', target.checked, '//', 'ind:', ind);
-
       return;
     }
 

@@ -1,35 +1,45 @@
-import React, { createContext, useState } from 'react';
+import React from 'react';
+import styles from './MainPage.module.css';
 import Header from '../../components/Header/Header.jsx';
 import { Routes, Route } from 'react-router-dom';
-import styles from './MainPage.module.css';
-import Emergency from '../../components/emergency/emergency';
-import ReadMore from '../../components/emergency/readMore';
+import { useState } from 'react';
+// import Layout from '../Layout/Layout';
+import {Layout} from '../Layout/Layout.jsx';
+
+import EmergencyListPage from '../EmergencyListPage/EmergencyListPage';
+import EmergencyPage from '../EmergencyPage/EmergencyPage';
 import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage';
-import Accordion from '../../components/accordion/accordion';
+// import AccordionList from '../../components/accordion/AccordionList.jsx';
+
 import Logo from '../../components/Logo/Logo';
 import { SearchContext } from '../../shared/search-context';
 
 const MainPage = function () {
   const [searchValue, setSearchValue] = useState('');
-
   return (
     <>
       <div className={styles.bgContainer}>
         <SearchContext.Provider value={searchValue}>
-        <Header setSearchValue={setSearchValue} />
-        <Logo />
-        <Accordion />
-        <Routes>
-          <Route path="/" exact element={<Emergency />} />
-          <Route path="/readMore" element={<ReadMore />} />
-          <Route
-            path="/alarmingSuitcasePage"
-            element={<AlarmingSuitcasePage />}
-          />
-        </Routes>
+          {/* <Header setSearchValue={setSearchValue} />
+            <Logo />
+            <AccordionList />  */}
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route
+                path="/EmergencyListPage"
+                element={<EmergencyListPage />}
+              />
+
+              <Route path="/EmergencyPage" element={<EmergencyPage />} />
+
+              <Route
+                path="/AlarmingSuitcasePage"
+                element={<AlarmingSuitcasePage />}
+              />
+            </Route>
+          </Routes>
         </SearchContext.Provider>
       </div>
-
     </>
   );
 };

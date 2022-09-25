@@ -2,10 +2,11 @@ import React from 'react';
 
 import style from './accordion.module.css';
 // import styles from './accordion.css';
+
 const Accordion = props => {
   return (
     <>
-      <div className={style.container}>
+      <div className={`${style.container} ${style.width100}`}>
         <details>
           <summary>
             <span className={style.iconItem1}></span>Надзвичайні ситуації
@@ -95,6 +96,7 @@ const Accordion = props => {
         </details>
       </div>
     </>
+
   );
 };
 
