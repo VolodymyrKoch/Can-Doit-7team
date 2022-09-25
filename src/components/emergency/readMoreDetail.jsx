@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./emergency.module.css";
+import style from "./Emergency.module.css";
 
 const ReadMoreDetail = ({element}) => {
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import stylesCheckList from './AlarmingCheckList.module.css';
-import styles from '../AlarmingSuitcase/alarmingSuitcase.module.css';
+import styles from '../AlarmingSuitcase/AlarmingSuitcase.module.css';
 
 const AlarmingCheckList = function (props) {
   const selected = props.selectedList;
