@@ -15,7 +15,7 @@ const AccordionList = ({ data }) => {
             />
           </div>
         ))}
-        <Link to="/alarmingSuitcasePage">
+        <Link to="/EvacuationPage">
           <details>
             <summary>
               <span className={style.iconItem1}></span>Евакуація

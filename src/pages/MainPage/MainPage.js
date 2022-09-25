@@ -9,6 +9,7 @@ import {Layout} from '../Layout/Layout.jsx';
 import EmergencyListPage from '../EmergencyListPage/EmergencyListPage';
 import EmergencyPage from '../EmergencyPage/EmergencyPage';
 import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage';
+import EvacuationPage from '../EvacuationPage/EvacuationPage';
 // import AccordionList from '../../components/accordion/AccordionList.jsx';
 
 import Logo from '../../components/Logo/Logo';
@@ -31,6 +32,8 @@ const MainPage = function () {
               />
 
               <Route path="/EmergencyPage" element={<EmergencyPage />} />
+
+              <Route path="/EvacuationPage" element={<EvacuationPage />} />
 
               <Route
                 path="/AlarmingSuitcasePage"
