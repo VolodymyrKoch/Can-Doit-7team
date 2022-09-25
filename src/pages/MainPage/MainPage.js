@@ -31,6 +31,8 @@ const MainPage = function () {
 
               <Route path="/EmergencyPage" element={<EmergencyPage />} />
 
+              <Route path="/EvacuationPage" element={<EvacuationPage />} />
+
               <Route
                 path="/AlarmingSuitcasePage"
                 element={<AlarmingSuitcasePage />}
