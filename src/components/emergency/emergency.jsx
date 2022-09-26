@@ -65,14 +65,18 @@ const Emergency = ({emergency}) => {
                               </h2>
 
                          }    
+                            <div className={style.visibleLg}>
+                                
+                                <TodoList element={element} activeTodoList={activeTodoList}/>  
 
+                            </div>
 
-                        {window.innerWidth >= 768 ? 
+                         <div className={style.hiddenLg}>
 
-                           <TodoList element={element} activeTodoList={activeTodoList}/> :   
+                         { isActiveReadMore? null : <TodoList element={element} activeTodoList={activeTodoList}/> }
 
-                              isActiveReadMore? null : <TodoList element={element} activeTodoList={activeTodoList}/> 
-                        }
+                         </div>
+                        
                           
                       </section>
   
@@ -97,12 +101,17 @@ const Emergency = ({emergency}) => {
 
                          } 
 
-                          { window.innerWidth >= 768 ?
+                            <div className={style.visibleLg}>
+                                
+                                <ForbiddenList element={element} activeTodoList={activeTodoList}/> 
 
-                               <ForbiddenList element={element} activeTodoList={activeTodoList}/> :
-                          
-                                 isActiveReadMore? null : <ForbiddenList element={element} activeTodoList={activeTodoList}/> 
-                          }
+                            </div>
+                            <div className={style.hiddenLg}>
+                            
+                                { isActiveReadMore? null : <ForbiddenList element={element} activeTodoList={activeTodoList}/> }
+  
+                            </div>
+
 
                      </section>
 
