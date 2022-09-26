@@ -6,7 +6,7 @@
   margin: 0.5rem 0 0;
   background: transparent;
   border: none;
-  
+
 }
 .ceBtnLink {
   padding: 10px 35px;
@@ -38,7 +38,7 @@
     text-align: left;
     padding:10px;
     margin: 0.5rem 0 0 ;
-    
+
   }
   .ceBtnLink {
     padding:  0.5rem;
@@ -49,7 +49,7 @@
   .ceBtnLink::before {
     display: none;
   }
-  
+
   .active {
     color: var(--whiteColor);
     font-weight: 600;
@@ -60,7 +60,7 @@
     color:var(--blackOpacity-40);
     font-size: 1.125rem;
     font-weight: 600;
-  } 
+  }
   .fontColorWhite {
     color: var(--whiteColor);
     font-weight: 600;

@@ -3,17 +3,17 @@ import styles from './MainPage.module.css';
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
-import {Layout} from '../Layout/Layout.jsx';
+import { Layout } from '../Layout/Layout.jsx';
 import EmergencyListPage from '../EmergencyListPage/EmergencyListPage';
 import EmergencyPage from '../EmergencyPage/EmergencyPage';
-import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage';
+import EvacuationPage from '../EvacuationPage/EvacuationPage';
+import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage.jsx';
 import AccordionList from '../../components/Accordion/AccordionList.jsx';
 import Header from '../../components/Header/Header.jsx';
 import Logo from '../../components/Logo/Logo';
 import { SearchContext } from '../../shared/search-context';
 
 const MainPage = function () {
-
   const [searchValue, setSearchValue] = useState('');
   return (
     <>
@@ -30,6 +30,8 @@ const MainPage = function () {
               />
 
               <Route path="/EmergencyPage" element={<EmergencyPage />} />
+
+              <Route path="/EvacuationPage" element={<EvacuationPage />} />
 
               <Route
                 path="/AlarmingSuitcasePage"

@@ -96,7 +96,6 @@ const Accordion = props => {
         </details>
       </div>
     </>
-
   );
 };
 

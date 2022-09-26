@@ -26,12 +26,14 @@ const Layout = () => {
     fetchEmergency();
   }, []);
 
-  const titleList = data.map( 
-     ({id, title}) => ({[id] : title}))
-console.log('emergencyTitles',titleList);
+
+//   const titleList = data.map( 
+//      ({id, title}) => ({[id] : title}))
+// console.log('emergencyTitles',titleList);
 
   // const caseList = data.map( 
   //   ({title, cases:[]}) => ({[id] : title}))
+
   //  const handleClick = (e) => {
   // setEmergencyItem(emergencyItem)
   // console.log('emergencyItem', emergencyItem)
