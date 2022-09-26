@@ -26,13 +26,12 @@ const EmergencyPage = ({ emergencyItem }, ...props) => {
 
   return (
     <div className={style.pageMain}>
-      {window.innerWidth >= 768 ? (
-        <>
-          <Header setSearchValue={setSearchValue} />
 
-          <Navigation />
-        </>
-      ) : null}
+      <div className={style.visibleLg}>
+        <Header setSearchValue={setSearchValue} />
+        <Navigation /> 
+      </div>
+   
 
       <Emergency emergency={emergency} />
     </div>

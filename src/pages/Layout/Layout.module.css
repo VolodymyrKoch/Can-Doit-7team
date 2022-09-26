@@ -29,6 +29,12 @@
 	background: var(--body-bg);
 
 }
+.visibleLg {
+  display: block;
+}
+.hiddenLg {
+  display: none;
+}
 
 @media all and (max-width:768px) {
   .layoutMain {
@@ -48,6 +54,11 @@
     /* width: 100%; */
     max-width: none;
   }
-
+  .visibleLg {
+    display: none;
+  }
+  .hiddenLg {
+    display: block;
+  }
 }
 
