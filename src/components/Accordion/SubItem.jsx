@@ -1,20 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useContext } from "react";
+import { Link} from "react-router-dom";
+import style from './Accordion.module.css'
+import { IdContext } from "../../shared/Context/IdContext";
 
-const SubItem = ({emergencyItem, onClick}) => {
-  console.log('subitem:', emergencyItem)
+const SubItem = ({id, title}) => {
 
-  // const handleClick = ({emergencyItem}) => {
-  //     console.log('onClick:', emergencyItem)
-  //   onClick({emergencyItem})
-  // }
+const {setIdSearch } = useContext(IdContext)
+
   return (
 
                             
-            <Link  to={"/EmergencyPage"} /*onClick={handleClick}*/ > 
+            <Link  to={"/EmergencyPage"}  > 
               
-                <details><summary>{emergencyItem.title}</summary></details> 
-
+                <details onClick = {() => setIdSearch(id)}><summary className={style.fontColorActive} key={id} >{title} </summary></details> 
             </Link> 
 
 

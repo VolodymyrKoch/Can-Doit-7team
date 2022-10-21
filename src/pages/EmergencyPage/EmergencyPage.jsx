@@ -1,30 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Emergency from '../../components/Emergency/Emergency.jsx';
 import style from './EmergencyPage.module.css';
 import Navigation from '../../shared/Navigation/Navigation';
 import Header from '../../components/Header/Header';
+import { EmergencyContext } from '../../shared/Context/EmergencyContext.js';
 
-const EmergencyPage = ({ emergencyItem }, ...props) => {
-  // console.log("emergencyItem",emergencyItem,props)
 
-  const [emergency, setEmergency] = useState([]);
+const EmergencyPage = () => {
+  
+ 
   const [searchValue, setSearchValue] = useState('');
-
-  async function fetchEmergency() {
-    const response = await fetch('data/emergency.json', {
-      headers: {
-        Accept: 'application/json',
-      },
-    });
-
-    const data = await response.json();
-    setEmergency(data);
-  }
-  useEffect(() => {
-    fetchEmergency();
-  }, []);
+  const {emergency, setEmergency} = useContext(EmergencyContext);
+  
 
   return (
+
     <div className={style.pageMain}>
 
       <div className={style.visibleLg}>
@@ -32,8 +22,8 @@ const EmergencyPage = ({ emergencyItem }, ...props) => {
         <Navigation /> 
       </div>
    
-
-      <Emergency emergency={emergency} />
+       {emergency && <Emergency /> }
+    
     </div>
   );
 };
