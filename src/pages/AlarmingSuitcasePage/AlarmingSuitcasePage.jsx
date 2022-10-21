@@ -20,8 +20,10 @@ const AlarmingSuitcasePage = function () {
   return (
     <>
       <div className={styles.alarmingPage}>
-        <Header />
-        <Navigation />
+        <div className={styles.visibleLg}>
+          <Header />
+          <Navigation /> 
+        </div>
         <div className={styles.alarming}>
           <AlarmingSuitcase selectedList={checkedList} />
           <AlarmingCheckList selectedList={checked} />
