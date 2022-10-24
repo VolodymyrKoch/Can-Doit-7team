@@ -7,45 +7,37 @@ import TodoList from "./TodoList";
 import ForbiddenList from "./ForbiddenList";
 import MyButton from '../../shared/MyButton/MyButton';
 import ReadMoreDetail from './ReadMoreDetail';
+import { EmergencyContext } from '../../shared/Context/EmergencyContext';
 
 
-const Emergency = ({emergency}) => {
-
+const Emergency = () => {
 
   const  searchValue = useContext (SearchContext);
   const [isActiveReadMore, setIsActiveReadMore] = useState(false)
   const [activeTodoList, setActiveTodoList] = useState(true)
+  const {emergency, setEmergency} = useContext(EmergencyContext);
  
 
   const setVisibleBlock = () => {
-    
-    setIsActiveReadMore(true)
-       
-  }
-  const setHiddenBlock = () => {
-    
-    setIsActiveReadMore(false)
-       
-  }
 
-  return (
+    setIsActiveReadMore( (visible) => !visible)
+  }
+  
+   return (
 
     <div>
 
       <div className={style.container}>
         <div id={style.componentEmergency}>
           <hr className={style.ceHr}/>
-                   {emergency.map( (element, id) => (
-
-              <div key={id}>
-
+              <div >
                 <div className={style.ceContent}>
 
                       <section className={`${style.ceTodo} ${style.sectionDesktopStyle} ${style.sectionDesktopStyleShadow }`}>
 
                           <h1 className={`${style.ceTitle} ${style.ceTitleH1}`}>
 
-                              {element.title}
+                              {emergency.title}
 
                           </h1>
 
@@ -54,25 +46,29 @@ const Emergency = ({emergency}) => {
 
                             <h2 
                               className={`${style.ceTitle} ${style.notActive}`} 
-                              onClick={setHiddenBlock}
+                              onClick={setVisibleBlock}
                               >  Ваші дії 
                             </h2> :
 
                                <h2 
                                className={style.ceTitle} 
-                               onClick={setHiddenBlock}
+                               onClick={setVisibleBlock}
                                > Ваші дії  
                               </h2>
 
                          }    
+                            <div className={style.visibleLg}>
+                                
+                               <TodoList  activeTodoList={activeTodoList}/>  
 
+                            </div>
 
-                        {window.innerWidth >= 768 ? 
+                         <div className={style.hiddenLg}>
 
-                           <TodoList element={element} activeTodoList={activeTodoList}/> :   
+                         { !isActiveReadMore && <TodoList activeTodoList={activeTodoList}/> }
 
-                              isActiveReadMore? null : <TodoList element={element} activeTodoList={activeTodoList}/> 
-                        }
+                         </div>
+                        
                           
                       </section>
   
@@ -85,24 +81,29 @@ const Emergency = ({emergency}) => {
 
                             <h2 
                               className={`${style.ceTitle} ${style.forbiddenTodoTitle} ${style.notActive}`} 
-                              onClick={setHiddenBlock}
+                              onClick={setVisibleBlock}
                               > Заборонено 
                             </h2> :
 
                                <h2 
                                className={`${style.ceTitle} ${style.forbiddenTodoTitle}`} 
-                               onClick={setHiddenBlock}
+                               onClick={setVisibleBlock}
                                > Заборонено  
                               </h2>
 
                          } 
 
-                          { window.innerWidth >= 768 ?
+                            <div className={style.visibleLg}>
+                                
+                                <ForbiddenList activeTodoList={activeTodoList}/>  
 
-                               <ForbiddenList element={element} activeTodoList={activeTodoList}/> :
-                          
-                                 isActiveReadMore? null : <ForbiddenList element={element} activeTodoList={activeTodoList}/> 
-                          }
+                            </div>
+                            <div className={style.hiddenLg}>
+                            
+                                { !isActiveReadMore && <ForbiddenList  activeTodoList={activeTodoList}/> }
+  
+                            </div>
+
 
                      </section>
 
@@ -115,7 +116,7 @@ const Emergency = ({emergency}) => {
 
                         <div  className={` ${style.notActive}  ${style.ceBtnLink} ${style.notActiveDesktop}`}>
 
-                           { isActiveReadMore ? null :  <MyButton onClick={setVisibleBlock} >Докладніше</MyButton> }
+                           { !isActiveReadMore &&  <MyButton onClick={setVisibleBlock} >Докладніше</MyButton> }
 
                         </div>
 
@@ -123,29 +124,22 @@ const Emergency = ({emergency}) => {
                   </div>
 
            
-                   {isActiveReadMore ?
+                   {isActiveReadMore &&
 
                     <section className={`${style.ceTodo} ${style.sectionDesktopStyleShadow} `}> 
 
                       <div className={style.containerBtn}>
 
-                        <MyButton onClick={setHiddenBlock} >Докладніше</MyButton>
+                        <MyButton onClick={setVisibleBlock} >Докладніше</MyButton>
 
                       </div>
 
-                      <ReadMoreDetail  element={element}  activeReadMore={isActiveReadMore}/>
+                      <ReadMoreDetail activeReadMore={isActiveReadMore}/>
 
-                    </section> :
-
-                    null
+                    </section>  
                   }
-                  
-
-
 
               </div>
-           ))}
-                     
       </div>
     </div>
    </div>

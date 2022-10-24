@@ -9,7 +9,19 @@
   /* width: 100vmin; */
   /* width: 100vmax; */
 
-
-
-
+}
+.visibleLg {
+  display: block;
+}
+.hiddenLg {
+  display: none;
+}
+@media all and (max-width:768px) {
+  
+  .visibleLg {
+    display: none;
+  }
+  .hiddenLg {
+    display: block;
+  }
 }
