@@ -36,13 +36,13 @@
 .ceTitle {
   padding: 0.5rem;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   margin: 0.5rem 0;
   color: var(--blackFont);
   text-align: center;
 }
 .ceTitleH1 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
 }
 .ceTodoItem, .ceForbiddenTodoItem {
@@ -58,7 +58,7 @@
   justify-content:space-bettwen;
   align-items: center;
   margin: 0.5rem 0;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 
 }
 .iconItem {
@@ -72,7 +72,8 @@
   width:2rem;
   min-height: 2rem;
   margin: 0 0 0 2rem;
-  background: center  no-repeat url('../../image/icon/notification2.png');
+  background: center  no-repeat url('../../image/icon/forbidden-icon.png');
+  background-size: contain;
 }
 .textItem {
   width: calc(100% - 80px);
@@ -92,7 +93,7 @@
 .textItemReadMore {
   width: 100%;
   margin-top: 1rem;
-  line-height: 1.25;
+  line-height: 1;
   border-top:1px solid var(--colorHr);
   border-bottom:1px solid var(--colorHr);
   height: 90%;
@@ -129,7 +130,7 @@
 }
 #componentEmergency {
   font-family:'Inter', 'Montserrat', 'Roboto', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--whiteColor);
   width: 80%;
@@ -160,7 +161,7 @@
 .ceTitle {
   padding: 0.5rem;
   font-weight: 600;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   margin: 0.5rem 0;
   color: var(--whiteColor);
   text-align: left;
@@ -200,7 +201,8 @@
 }
 
 .ceForbiddenTodoItem .iconItem {
-  background:left no-repeat url('../../image/icon/notification.png');
+  background:var(--backgroundBlack) left no-repeat url('../../image/icon/forbidden-icon.png');
+  background-size: contain;
   width:40px;
   margin: 0;
 }
@@ -244,6 +246,9 @@
   }
 .ceTitleH1 {
     text-align: center;
+  }
+  .notActive, .fontColorBlack{
+    color: #70747d;
   }
 
 }

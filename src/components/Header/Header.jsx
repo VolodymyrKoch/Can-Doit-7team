@@ -8,7 +8,7 @@ import menuIcon from '../../image/icon/button-menu.png';
 import logoIcon from '../../image/icon/you-прозорий.png';
 import btn101Icon from '../../image/icon/button-101.png';
 import btn103Icon from '../../image/icon/button-103.png';
-import btnDelete from '../../image/icon/X.png';
+import btnDelete from '../../image/icon/close-icon.png';
 import PropTypes from 'prop-types';
 
 

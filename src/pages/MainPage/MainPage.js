@@ -1,43 +1,53 @@
 import React from 'react';
 import styles from './MainPage.module.css';
-import Header from '../../components/Header/Header.jsx';
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-// import Layout from '../Layout/Layout';
-import {Layout} from '../Layout/Layout.jsx';
 
+import { Layout } from '../Layout/Layout.jsx';
 import EmergencyListPage from '../EmergencyListPage/EmergencyListPage';
 import EmergencyPage from '../EmergencyPage/EmergencyPage';
-import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage';
-// import AccordionList from '../../components/accordion/AccordionList.jsx';
-
-import Logo from '../../components/Logo/Logo';
+import EvacuationPage from '../EvacuationPage/EvacuationPage';
+import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage.jsx';
 import { SearchContext } from '../../shared/search-context';
+import { IdContext } from '../../shared/Context/IdContext';
+import { EmergencyContext} from '../../shared/Context/EmergencyContext'
+
+
 
 const MainPage = function () {
+
   const [searchValue, setSearchValue] = useState('');
+  const [idSearch, setIdSearch] = useState([]);
+  const [emergency, setEmergency] = useState();
+
+
+  console.log('idSearch', idSearch)
+
   return (
     <>
       <div className={styles.bgContainer}>
         <SearchContext.Provider value={searchValue}>
-          {/* <Header setSearchValue={setSearchValue} />
-            <Logo />
-            <AccordionList />  */}
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route
-                path="/EmergencyListPage"
-                element={<EmergencyListPage />}
-              />
+          <IdContext.Provider value={{idSearch, setIdSearch}}>
+            <EmergencyContext.Provider value={{emergency, setEmergency}}>
+              <Routes>
+                <Route path="/" element={<Layout />}>
+                  <Route
+                    path="/EmergencyListPage"
+                    element={<EmergencyListPage />}
+                  />
 
-              <Route path="/EmergencyPage" element={<EmergencyPage />} />
+                  <Route path="/EmergencyPage" element={<EmergencyPage />} />
 
-              <Route
-                path="/AlarmingSuitcasePage"
-                element={<AlarmingSuitcasePage />}
-              />
-            </Route>
-          </Routes>
+                  <Route path="/EvacuationPage" element={<EvacuationPage />} />
+
+                  <Route
+                    path="/AlarmingSuitcasePage"
+                    element={<AlarmingSuitcasePage />}
+                  />
+                </Route>
+              </Routes>
+            </EmergencyContext.Provider>
+           </IdContext.Provider>
         </SearchContext.Provider>
       </div>
     </>

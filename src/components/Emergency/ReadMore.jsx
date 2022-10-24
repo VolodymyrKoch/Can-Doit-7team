@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./emergency.module.css";
-import ReadMoreDetail from "./readMoreDetail";
-import MyButton from "../../shared/myButton/myButton";
+import ReadMoreDetail from "./ReadMoreDetail";
+import MyButton from "../../shared/MyButton/MyButton";
 
 
 
