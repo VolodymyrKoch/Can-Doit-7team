@@ -6,7 +6,6 @@ import AccordionList from '../../components/Accordion/AccordionList';
 
 const Layout = () => {
   const [data, setData] = useState([]);
-  // const [emergencyItem, setEmergencyItem] = useState([])
 
   async function fetchEmergency() {
     const response = await fetch('data/data.json', {
@@ -22,18 +21,6 @@ const Layout = () => {
   useEffect(() => {
     fetchEmergency();
   }, []);
-
-  // const emergencyTitles = function ({data}) {
-  //   console.log('data',data)
-  //   // return data.map(
-  //   //     ({id, title}) => ({[id] : title}))
-  // }
-  // emergencyTitles()
-
-  //  const handleClick = (e) => {
-  // setEmergencyItem(emergencyItem)
-  // console.log('emergencyItem', emergencyItem)
-  // };
 
   return (
     <>
