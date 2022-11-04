@@ -10,7 +10,7 @@ const {setIdSearch } = useContext(IdContext)
   return (
 
                             
-            <Link  to={"/EmergencyPage"}  > 
+            <Link  to={"EmergencyPage"}  > 
               
                 <details onClick = {() => setIdSearch(id)}><summary className={style.fontColorActive} key={id} >{title} </summary></details> 
             </Link> 

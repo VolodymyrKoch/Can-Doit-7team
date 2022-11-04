@@ -20,14 +20,14 @@ const AccordionList = ({ data }) => {
           />
           </div>
         ))}
-        <Link to="/EvacuationPage">
+        <Link to="EvacuationPage">
           <details>
             <summary onClick={openListIcon}>
               <span className={`${style.iconItem}  ${iconActive ? style.iconItem1 : style.iconItem2}`}></span>Евакуація
             </summary>
           </details>
         </Link>
-        <Link to="/AlarmingSuitcasePage">
+        <Link to="/Layout/AlarmingSuitcasePage">
           <details>
             <summary>
               <span className={`${style.iconItem}  ${iconActive ? style.iconItem1 : style.iconItem2}`}></span>Тривожна валізка
