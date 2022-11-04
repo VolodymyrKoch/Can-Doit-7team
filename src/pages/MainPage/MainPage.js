@@ -10,48 +10,41 @@ import EvacuationPage from '../EvacuationPage/EvacuationPage';
 import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage.jsx';
 import { SearchContext } from '../../shared/search-context';
 import { IdContext } from '../../shared/Context/IdContext';
-import { EmergencyContext} from '../../shared/Context/EmergencyContext'
-
-
+import { EmergencyContext } from '../../shared/Context/EmergencyContext';
+import HomePage from '../HomePage/HomePage';
 
 const MainPage = function () {
-
   const [searchValue, setSearchValue] = useState('');
   const [idSearch, setIdSearch] = useState([]);
   const [emergency, setEmergency] = useState();
 
-
-  console.log('idSearch', idSearch)
+  console.log('idSearch', idSearch);
 
   return (
     <>
       <div className={styles.bgContainer}>
         <SearchContext.Provider value={searchValue}>
-          <IdContext.Provider value={{idSearch, setIdSearch}}>
-            <EmergencyContext.Provider value={{emergency, setEmergency}}>
+          <IdContext.Provider value={{ idSearch, setIdSearch }}>
+            <EmergencyContext.Provider value={{ emergency, setEmergency }}>
               <Routes>
                 <Route path="/" element={<Layout />}>
-
-                {/* <Route path="/home" element={<HomePage />} />₴ */}
-
+                  <Route index element={<HomePage />} />
 
                   <Route
                     path="/EmergencyListPage"
                     element={<EmergencyListPage />}
                   />
 
-                  <Route path="/EmergencyPage" element={<EmergencyPage />} />
-
-                  <Route path="/EvacuationPage" element={<EvacuationPage />} />
+                  <Route path="EvacuationPage" element={<EvacuationPage />} />
 
                   <Route
-                    path="/AlarmingSuitcasePage"
+                    path="AlarmingSuitcasePage"
                     element={<AlarmingSuitcasePage />}
                   />
                 </Route>
               </Routes>
             </EmergencyContext.Provider>
-           </IdContext.Provider>
+          </IdContext.Provider>
         </SearchContext.Provider>
       </div>
     </>

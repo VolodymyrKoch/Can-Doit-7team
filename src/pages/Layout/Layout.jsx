@@ -70,7 +70,7 @@ const Layout = () => {
                 <Header setSearchValue={setSearchValue} />
             </div>
 
-            <AccordionList  data={data} />
+              <AccordionList  data={data} />
           </div>
 
           <main className={style.layoutContent}>
