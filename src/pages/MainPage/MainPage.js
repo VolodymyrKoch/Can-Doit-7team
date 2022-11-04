@@ -31,6 +31,10 @@ const MainPage = function () {
             <EmergencyContext.Provider value={{emergency, setEmergency}}>
               <Routes>
                 <Route path="/" element={<Layout />}>
+
+                {/* <Route path="/home" element={<HomePage />} />₴ */}
+
+
                   <Route
                     path="/EmergencyListPage"
                     element={<EmergencyListPage />}
