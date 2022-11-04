@@ -51,7 +51,7 @@ const AccordionItem = ({id, title, cases}) => {
                       <summary className={style.fontColorActive} onClick = {() => setIdSearch(emergencyItem.id)}>
                                             
                         {!emergencyItem.emergencyItem 
-                          ? <Link to={"/EmergencyPage"} onClick = {() => setIdSearch(emergencyItem.id)} className={style.fontColorActive}> 
+                          ? <Link to={"EmergencyPage"} onClick = {() => setIdSearch(emergencyItem.id)} className={style.fontColorActive}> 
                              {emergencyItem.title}
                            </Link>
                           : emergencyItem.title

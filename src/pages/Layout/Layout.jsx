@@ -62,15 +62,15 @@ const Layout = () => {
         <div className={style.pageContainer}>
           <div className={style.epAside}>
             
-            <div className={style.visibleLg}>
-                <Logo />
-            </div>
-              
-            <div className={style.hiddenLg}>
-                <Header setSearchValue={setSearchValue} />
-            </div>
+              <div className={style.visibleLg}>
+                  <Logo />
+              </div>
+                
+              <div className={style.hiddenLg}>
+                  <Header setSearchValue={setSearchValue} />
+              </div>
 
-            <AccordionList  data={data} />
+              <AccordionList  data={data} />
           </div>
 
           <main className={style.layoutContent}>
