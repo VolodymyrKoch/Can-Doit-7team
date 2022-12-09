@@ -1,37 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import useFetch from '../../Hooks/UseFetch';
 
 import styles from './AlarmingSuitcase.module.css';
 
 const AlarmingSuitcase = function ({ selectedList }) {
-  const [data, setData] = useState([]);
   const [selected, setSelected] = useState([]);
   useEffect(() => {
     selectedList(selected);
   }, [selected, selectedList]);
 
-  // console.log('selected:', selected);
-
-  function getData() {
-    fetch('data/alarmingSuitcase.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    })
-      .then(function (response) {
-        // console.log('response.url:', response);
-        return response.json();
-      })
-      .then(function (myJson) {
-        setData(myJson);
-        // console.log('myJson:', myJson);
-        // console.log('data:', data);
-      });
-  }
-  useEffect(() => {
-    getData();
-    //  selectedList(selected);
-  }, []);
+  const data_alarmingSuitcase = useFetch('alarming-suitcase');
+  
   function arrayRemoveElement(array, index) {
     return [...array.slice(0, index), ...array.slice(index + 1)];
   }
@@ -57,8 +36,6 @@ const AlarmingSuitcase = function ({ selectedList }) {
     } else {
       return;
     }
-
-    // const name = target.name;
   }
 
   return (
@@ -73,7 +50,7 @@ const AlarmingSuitcase = function ({ selectedList }) {
             йтимете пішки та як на довго.
           </p>
           <ul className={styles.thingsList}>
-            {data.map((el, id) => (
+            {data_alarmingSuitcase.map((el, id) => (
               <li key={id} className={styles.productItem}>
                 <h3 className={styles.productTitle}>{el.title}</h3>
                 <p className={styles.productDescription}>{el.description}</p>

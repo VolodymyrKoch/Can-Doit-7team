@@ -11,28 +11,28 @@ import Logo7team from '../../shared/Logo7team/Logo7team';
 
 
 const Layout = () => {
-  
+
   const [searchValue, setSearchValue] = useState();
   const {idSearch, setIdSearch} = useContext(IdContext);
   const [arrayOfEmergency, setArrayOfEmergency] = useState([]);
   const {emergency, setEmergency} = useContext(EmergencyContext);
-  
+
 
   const data = useFetch('emergency')
-   console.log('data', data)
-  console.log('idSearch', idSearch)
+  //  console.log('data', data)
+  // console.log('idSearch', idSearch)
 
- 
+
   const getArrayOfEmergencyFromData = () => {
     const array = []
     data.map(item => {
       item.cases.map( element => {
         element.emergency.map( elem => {
           if (!elem.emergencyItem) {
-            array.push(elem)  
-          } else { 
+            array.push(elem)
+          } else {
             elem.emergencyItem.map(el => array.push(el))
-          } 
+          }
         })
       })
     })
@@ -43,18 +43,18 @@ const Layout = () => {
     getArrayOfEmergencyFromData()
 
   }, [data])
-  
+
   const getObjectById = () => {
     const obj = arrayOfEmergency.find(el => el.id === idSearch)
      setEmergency(obj)
   }
- 
+
   useEffect(() => {
     getObjectById();
 
   }, [idSearch])
-  
-  console.log('emergency', emergency)
+
+  // console.log('emergency', emergency)
 
   return (
     <>
@@ -70,11 +70,12 @@ const Layout = () => {
                   <Header setSearchValue={setSearchValue} />
               </div>
 
+
               <AccordionList  data={data} />
           </div>
 
           <main className={style.layoutContent}>
-            <Outlet /> 
+            <Outlet />
             <Logo7team/>
           </main>
         </div>
