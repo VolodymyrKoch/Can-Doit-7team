@@ -29,7 +29,7 @@ const AccordionList = ({ data }) => {
             </summary>
           </details>
         </Link>
-        <Link to="/AlarmingSuitcasePage">
+        <Link to="AlarmingSuitcasePage">
           <details>
             <summary>
               <span
