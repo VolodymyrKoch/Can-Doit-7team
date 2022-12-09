@@ -6,26 +6,19 @@ import Header from '../../components/Header/Header';
 import { EmergencyContext } from '../../shared/Context/EmergencyContext.js';
 import Breadcrumbs from '../../shared/Breadcrumbs/Breadcrumbs.jsx';
 
-
 const EmergencyPage = () => {
-  
- 
   const [searchValue, setSearchValue] = useState('');
-  const {emergency, setEmergency} = useContext(EmergencyContext);
-  
+  const { emergency, setEmergency } = useContext(EmergencyContext);
 
   return (
-
     <div className={style.pageMain}>
-
       <div className={style.visibleLg}>
         <Header setSearchValue={setSearchValue} />
         {/* <Breadcrumbs />  */}
-        <Navigation /> 
+        <Navigation />
       </div>
-   
-       {emergency && <Emergency /> }
-    
+
+      {emergency && <Emergency />}
     </div>
   );
 };
