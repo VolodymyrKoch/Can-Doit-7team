@@ -6,9 +6,10 @@
     margin: 1rem auto;
     background: var(----backgroundWhite);
     display: block;
+    
   }
 
-  #componentEvacuation {
+  #componentMain {
     font-family:'Inter', 'Montserrat', 'Roboto', sans-serif;
     font-size: 1rem;
     font-weight: 500;
@@ -16,7 +17,7 @@
     width: 100%;
   }
 
-  .evacContent {
+  .mainContent {
     margin-top: 24px;
     margin-left: 24px;
     width: 100%;
@@ -28,7 +29,20 @@
     flex-direction: column;
   }
 
-  .evacTitle h2 {
+  .carouselBox {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .carouselBox img {
+    margin-left: 5px;
+    width: 30%;
+    
+  }
+
+
+  .mainTitle h2 {
     font-family:'Inter', sans-serif;
     border-bottom: 2px solid #E6E8F0;
     padding-top: 32px;
@@ -38,15 +52,15 @@
     display: block;
   }
 
-  .evacTodo {
-    display: block;
-    padding-left: 40px;
-    padding-top: 24px;
+  .list {
+    list-style-type:none;
   }
 
-  .evacTodoItem {
-    list-style: circle;
-  } 
+.logo {
+  display: none;
+}
+
+
 }
 
   @media (max-width: 768px) {
@@ -58,10 +72,10 @@
     padding: 1.5rem;
     background: var(--backgroundBlack);
   }
-  #componentEvacuation {
+  #componentMain {
     font-family:'Inter', 'Montserrat', 'Roboto', sans-serif;
     font-size: 1.25rem;
-    font-weight: 200;
+    font-weight: 500;
     color: var(--whiteColor);
     width: 80%;
     margin:0 0 0 0;
@@ -73,19 +87,46 @@
     grid-gap:0;
   }
 
-  .evacTitle h2 {
+  .mainTitle h2 {
     font-family:'Inter', sans-serif;
     border-bottom: 2px solid #E6E8F0;
     padding-top: 32px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    margin-bottom: 20px;
+    padding-bottom: 24px;
+    padding-left: 24px;
     font-weight: 600;
     display: block;
+    
   }
 
-  .evacTodoItem {
-    list-style: circle;
+  .list {
+    list-style-type:none;
+    
+  }
+
+  .textItem {
+    padding-top: 20px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    font-weight: 400;
+    color: var (--whiteColor);
+  }
+
+  .phone {
+    color:#ff2800;
+  }
+
+  .carouselBox {
+    display: none;
+  }
+
+  .logo {
+    border-bottom: 3px solid #E6E8F0;
+    padding-bottom: 24px;
+    width: 100%;
+  }
+
+  .mainTitle h2 {
+    display: none;
   }
 }
  

@@ -1,13 +1,9 @@
-//import React from "react";
-import React, { useContext } from 'react';
-
+import React from 'react';
 import style from'./evacuation.module.css';
-
-import { SearchContext } from '../../shared/search-context';
-import { Link } from 'react-router-dom';
+//import { SearchContext } from '../../shared/search-context';
 
 const Evacuation = props => {
- const  searchValue = useContext (SearchContext);
+//const  searchValue = useContext (SearchContext);
 
    return (
 
@@ -26,10 +22,10 @@ const Evacuation = props => {
                     <ol className={style.evacTodo}>
                         <li><span className={style.textItem}>Про організацію евакуації можна дізнатись:</span></li>
                             <ul className={style.evacTodoItem}>
-                                <li><span className={style.textItem}>у кол-центрах місцевих територіальних громад чи місцевих адміністраціях;</span></li>
-                                <li><span className={style.textItem}> в кожній громаді є особа, яка відповідальна за евакуацію,  контактний телефон якої розповсюджується з рук в руки;</span></li>
-                                <li><span className={style.textItem}>через смс-розсилки, які доходять до адресатів навіть за відсутності якісного мобільного зв’язку;</span></li>
-                                <li><span className={style.textItem}>безпосередньо у водіїв та волонтерів, які під’їжджають до місць перебування людей.</span></li>
+                                <li>у кол-центрах місцевих територіальних громад чи місцевих адміністраціях;</li>
+                                <li>в кожній громаді є особа, яка відповідальна за евакуацію,  контактний телефон якої розповсюджується з рук в руки;</li>
+                                <li>через смс-розсилки, які доходять до адресатів навіть за відсутності якісного мобільного зв’язку;</li>
+                                <li>безпосередньо у водіїв та волонтерів, які під’їжджають до місць перебування людей.</li>
                             </ul>
                             <br></br>
                         <li><span className={style.textItem}> Контактна особа проконсультує та зорієнтує на місці про дату і місце евакуації або надасть достовірну інформацію, як і де можна виїхати.</span></li>
@@ -46,15 +42,10 @@ const Evacuation = props => {
                 </div>
         
 
-            </div>
-           
-
-           
+            </div>           
          </div>
         </div>
     </div>
-
-
     )
 }
 
