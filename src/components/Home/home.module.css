@@ -10,12 +10,12 @@
       }
     
       #componentMain {
-        font-family:'Inter', 'Montserrat', 'Roboto', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: 1rem;
         font-weight: 500;
         color: var( --blackFont);
         width: 100%;
-      }
+      } 
     
       .mainContent {
         margin-top: 24px;
@@ -29,7 +29,7 @@
         flex-direction: column;
       }
     
-      .carouselBox {
+      /* .carouselBox {
         margin-top: 24px;
         margin-bottom: 24px;
         width: 100%;
@@ -39,11 +39,11 @@
         margin-left: 5px;
         width: 30%;
         
-      }
+      } */
     
     
       .mainTitle h2 {
-        font-family:'Inter', sans-serif;
+        font-family:'Monserat', sans-serif;
         border-bottom: 2px solid #E6E8F0;
         padding-top: 32px;
         padding-bottom: 24px;
@@ -52,9 +52,19 @@
         display: block;
       }
     
-      .list {
-        list-style-type:none;
+      .textHome {
+        padding-top: 20px;
+        padding-bottom: 24px;
+        padding-left: 24px;
+        font-weight: 200; 
+        color: var (--blackFont);
       }
+      .textHome p {
+        margin-top: 20px;
+      }
+      /* .list {
+        list-style-type:none;
+      } */
     
     .logo {
       display: none;
@@ -103,12 +113,15 @@
         
       }
     
-      .textItem {
+      .textHome {
         padding-top: 20px;
         padding-bottom: 24px;
         padding-left: 24px;
-        font-weight: 400;
+        font-weight: 200;
         color: var (--whiteColor);
+      }
+      .textHome p {
+        margin-top: 20px;
       }
     
       .phone {

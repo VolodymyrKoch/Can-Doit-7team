@@ -8,7 +8,7 @@
   #componentEvacuation {
     font-family:'Inter', 'Montserrat', 'Roboto', sans-serif;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var( --blackFont);
     width: 100%;
   }
@@ -17,18 +17,18 @@
     margin-top: 24px;
     margin-left: 24px;
     width: 100%;
-    height: 536px;
     border-color: var(--backgroundWhite);
     box-shadow: 0px 2px 4px rgba(31, 41, 55, 0.06), 0px 4px 6px rgba(100, 116, 139, 0.12);
     border-radius: 5px;
     padding-left: 40px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
 
   }
 
   .evacTitle h2 {
-    font-family:'Inter', sans-serif;
+    font-family:'Monserat', sans-serif;
     border-bottom: 2px solid #E6E8F0;
     padding-top: 32px;
     padding-bottom: 24px;
@@ -48,6 +48,9 @@
     white-space: normal;
   }
 
+  .evacTodoItem {
+    padding-left: 40px;
+  }
  
   
  
