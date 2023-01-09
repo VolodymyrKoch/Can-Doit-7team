@@ -1,55 +1,47 @@
-import React, { useState, useContext} from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import style from './Accordion.module.css';
 import AccordionItem from './AccordionItem';
 
 
 const AccordionList = ({ data }) => {
-
-  const [isIconActive, setIsIconActive] = useState(false)
-  const [isEvacuation, setIsEvacuation] = useState(false)
-  
+  const [iconActive, setIconActive] = useState(true);
   const openListIcon = () => {
-    setIsIconActive((open) => !open) 
-  }
+    setIconActive(open => !open);
+  };
 
   return (
     <>
-      <div className={`${style.container} ${style.width100} `}>
-        <ul>
-
-           
-              {data.map((someCase) => (
-                 <li key={someCase.id} className={style.border} >
-                     <AccordionItem  {...someCase} />
-                </li>
-              ))}
-          
-          
-            <li  className={style.border} onClick={() => setIsEvacuation(!isEvacuation)}>
-                <NavLink to="EvacuationPage" className={style.styleList}> 
-                {({isActive}) => (
-                  <>
-                  <span  className={`${style.iconItem} ${isActive ? style.iconItem2 : style.iconItem1}`}/>
-                  <span className={`${isActive ? style.fontColorActive : ''}`}>Евакуація</span>
-                  </>
-                )}
-                    
-                    
-                </NavLink>
-            </li>
-            <li onClick={openListIcon} className={style.border}>
-              <NavLink to="AlarmingSuitcasePage" className={style.styleList}>
-                {({isActive}) => (
-                  <>
-                  <span  className={`${style.iconItem} ${isActive ? style.iconItem2 : style.iconItem1}`}></span>
-                  <span className={`${isActive ? style.fontColorActive : ''}`}>Тривожна валізка</span>
-                  </>
-                )}
-                
-              </NavLink>
-            </li>
-        </ul>
+      <div className={`${style.container} ${style.width100}`}>
+        {data.map(someCase => (
+          <div key={someCase.id}>
+            <AccordionItem {...someCase} />
+          </div>
+        ))}
+        <Link to="EvacuationPage">
+          <details>
+            <summary onClick={openListIcon}>
+              <span
+                className={`${style.iconItem}  ${
+                  iconActive ? style.iconItem1 : style.iconItem2
+                }`}
+              ></span>
+              Евакуація
+            </summary>
+          </details>
+        </Link>
+        <Link to="AlarmingSuitcasePage">
+          <details>
+            <summary>
+              <span
+                className={`${style.iconItem}  ${
+                  iconActive ? style.iconItem1 : style.iconItem2
+                }`}
+              ></span>
+              Тривожна валізка
+            </summary>
+          </details>
+        </Link>
       </div>
     </>
   );
