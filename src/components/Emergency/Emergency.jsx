@@ -20,7 +20,7 @@ const Emergency = () => {
 
   const setVisibleBlock = () => {
 
-    setIsActiveReadMore( (visible) => !visible)
+    setIsActiveReadMore( visible => !visible)
   }
   
    return (

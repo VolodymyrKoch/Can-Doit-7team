@@ -1,0 +1,105 @@
+
+.pageMain {
+  margin: 20px auto;
+  width:100%;
+  box-sizing: border-box;
+  background: var(--whiteColor);
+  color:#000000;
+  
+}
+.sectionDesktopStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px var(--blackOpacity-40);
+  
+}
+.dFlex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+ }
+.icon {
+  width: 62px;
+  display: block;
+  height: 62px;
+  padding-right: 1rem;
+  background-image: url('/src/image/icon/home.png');
+}
+.contentBlock{
+  width:100%
+}
+.pageMain details {
+  color: #000000;
+}
+.fontColorBlack {
+  color: #000000;
+}
+.ceTitle {
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: 0.5rem 0;
+  color: var(--blackFont);
+
+}
+.ceTitleH1 {
+  font-size: 1.25rem;
+  text-align: left;
+}
+.ceHr {
+  display: block;
+  text-align: center;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  border:none;
+  border-bottom: 1px solid var(--colorHr);
+}
+.list {
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 1.2rem 0 10px;
+  padding: 0 10px;
+}
+.listFirst {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 1rem 0 10px;
+  padding: 0 15px;
+}
+.listSecond{
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 1rem 0 10px;
+  padding: 0 20px;
+}
+.list a, .listFirst  a, .listSecond a {
+  display: block;
+}
+.list:hover, .listFirst:hover, .listSecond:hover {
+  color:blue
+}
+.displayNone{
+  display: none;
+}
+.displayBlock {
+  display: block;
+}
+.buttonStyle {
+  display: inline-block;
+  width: 100%;
+}
+
+
+@media all and (max-width:768px) {
+  .pageMain {
+    background: var(--body-bg);
+    width:100%;
+
+  }
+}

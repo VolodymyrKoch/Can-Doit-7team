@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import style from './Accordion.module.css';
 import AccordionItem from './AccordionItem';
 
+
 const AccordionList = ({ data }) => {
   const [iconActive, setIconActive] = useState(true);
   const openListIcon = () => {

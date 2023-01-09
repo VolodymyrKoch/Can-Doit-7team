@@ -16,12 +16,12 @@ const Layout = () => {
   const {idSearch, setIdSearch} = useContext(IdContext);
   const [arrayOfEmergency, setArrayOfEmergency] = useState([]);
   const {emergency, setEmergency} = useContext(EmergencyContext);
+
   
 
   const data = useFetch('emergency')
    console.log('data', data)
-  console.log('idSearch', idSearch)
-
+  
  
   const getArrayOfEmergencyFromData = () => {
     const array = []
@@ -39,6 +39,8 @@ const Layout = () => {
     setArrayOfEmergency(array)
   }
 
+
+
   useEffect(() => {
     getArrayOfEmergencyFromData()
 
@@ -54,7 +56,6 @@ const Layout = () => {
 
   }, [idSearch])
   
-  console.log('emergency', emergency)
 
   return (
     <>
@@ -70,7 +71,7 @@ const Layout = () => {
                   <Header setSearchValue={setSearchValue} />
               </div>
 
-              <AccordionList  data={data} />
+              <AccordionList  data={data}  />
           </div>
 
           <main className={style.layoutContent}>

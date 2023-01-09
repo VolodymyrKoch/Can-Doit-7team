@@ -40,6 +40,10 @@ a {
   text-decoration: none;
   outline: none;
 }
+li {
+  list-style-type: none;
+}
+
 /*img {*/
 /*  display: block;*/
 /*  width: 100%;*/
@@ -89,6 +93,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
 
 /* -- */
 
