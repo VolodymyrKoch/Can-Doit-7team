@@ -1,20 +1,15 @@
-:root {
-	--body-bg: rgba(17, 24, 39, 1);
-	--body-color: rgba(17, 24, 39, 1);
-	--collapse-bg: rgba(255, 255, 255, 0.1);
-	--collapse-color: #1a1a1a;
-	--collapse-line-color: #acacde;
-	--collapse-icon-color: #b8336a;
-	--collapse-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
+
 .pageMain {
   margin: 0 auto;
   width:100%;
+  height: 100%;
   box-sizing: border-box;
   background: var(--whiteColor);
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
 
 @media all and (max-width: 768px) {
   .pageMain {
@@ -27,3 +22,4 @@
   }
   
 }
+
