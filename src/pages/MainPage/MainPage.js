@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styles from './MainPage.module.css';
-import { Routes, Route } from 'react-router-dom';
-import { Layout } from '../Layout/Layout.jsx';
+import { Routes, Route } from 'react-router-dom';import { Layout } from '../Layout/Layout.jsx';
 import EmergencyListPage from '../EmergencyListPage/EmergencyListPage';
 import EmergencyPage from '../EmergencyPage/EmergencyPage';
 import EvacuationPage from '../EvacuationPage/EvacuationPage';

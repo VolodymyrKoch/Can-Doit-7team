@@ -13,15 +13,12 @@ const EvacuationPage = (props) => {
        
         <div className={style.pageMain}>
 
-            <Header setSearchValue={setSearchValue} />
+            <div className={style.visibleLg}> 
+             
+              <Header setSearchValue={setSearchValue} />
 
-                <div className={`${style.visibleLg} ${style.imageContainer}`}> 
-                <Evacuation />
-           
-            </div>
-
-
-
+             </div>   
+                  <Evacuation />
 
         </div>  
     </>
