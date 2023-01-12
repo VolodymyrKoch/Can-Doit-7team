@@ -94,6 +94,9 @@
   display: inline-block;
   width: 100%;
 }
+.visibleLg{
+  display: block;
+}
 
 
 @media all and (max-width:768px) {
@@ -101,5 +104,8 @@
     background: var(--body-bg);
     width:100%;
 
+  }
+  .visibleLg{
+    display: none;
   }
 }
