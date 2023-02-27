@@ -20,7 +20,7 @@ const Home = props => {
                     
                 {/* <div className={style.carouselBox}>
                      <CarouselComponent />                                            
-                </div> */}
+                </div>  */}
                                
                 <div className={style.logo}>
                     <img src={imageMax1} alt="" />

@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
 import style from './evacuationPage.module.css';
+import Navigation from '../../shared/Navigation/Navigation';
 import imageEmergency from '../../image/image1Max.jpg'
 import Header from '../../components/Header/Header';
 import Evacuation from '../../components/Evacuation/Evacuation.jsx';
@@ -13,12 +14,14 @@ const EvacuationPage = (props) => {
        
         <div className={style.pageMain}>
 
-            <Header setSearchValue={setSearchValue} />
+        <div className={style.visibleLg}>
+          <Header setSearchValue={setSearchValue} />
+          <Navigation /> 
+          </div> 
 
-                <div className={`${style.visibleLg} ${style.imageContainer}`}> 
-                <Evacuation />
-           
-            </div>
+          <div className={style.pageOutlet}>
+          <Evacuation />
+          </div>
 
 
 

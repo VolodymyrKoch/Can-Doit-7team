@@ -5,11 +5,7 @@
   height: 100%;
   box-sizing: border-box;
   background: var(--whiteColor);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
+  }
 
 @media all and (max-width: 768px) {
   .pageMain {
