@@ -14,6 +14,7 @@ const EvacuationPage = (props) => {
        
         <div className={style.pageMain}>
 
+
         <div className={style.visibleLg}>
           <Header setSearchValue={setSearchValue} />
           <Navigation /> 
@@ -22,9 +23,8 @@ const EvacuationPage = (props) => {
           <div className={style.pageOutlet}>
           <Evacuation />
           </div>
-
-
-
+ 
+                  <Evacuation />
 
         </div>  
     </>

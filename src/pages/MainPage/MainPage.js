@@ -1,9 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './MainPage.module.css';
-import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
-
-import { Layout } from '../Layout/Layout.jsx';
+import { Routes, Route } from 'react-router-dom';import { Layout } from '../Layout/Layout.jsx';
 import EmergencyListPage from '../EmergencyListPage/EmergencyListPage';
 import EmergencyPage from '../EmergencyPage/EmergencyPage';
 import EvacuationPage from '../EvacuationPage/EvacuationPage';
@@ -13,7 +10,7 @@ import { IdContext } from '../../shared/Context/IdContext';
 import { EmergencyContext} from '../../shared/Context/EmergencyContext'
 import HomePage from '../HomePage/HomePage';
 import NotFound from '../NotFound/NotFound';
-// import routes from '../../shared/Routes/routes';
+import EmergencyList from '../../components/EmergencyList/EmergencyList';
 
 
 
@@ -34,20 +31,21 @@ const MainPage = function () {
  
                 <Route path="/" element={<Layout />}>
 
-                  <Route index element={<HomePage />} />
+                    <Route index element={<HomePage />} />
                   
-                  {/* <Route path="Emergency" element={<EmergencyPage />} /> */}
-                  <Route path="Category/:id/Emergency/:id" element={<EmergencyPage />} /> 
-                  <Route path="Category/:id" element={<EmergencyListPage />} />
+                    <Route path="Category/" element={<EmergencyListPage />} >
 
-                  
-                  <Route path="EvacuationPage" element={<EvacuationPage />} />
-                  <Route path="AlarmingSuitcasePage" element={<AlarmingSuitcasePage />} />
-                  <Route path="*" element={<NotFound/> } />
+                        <Route path=":id" element={<EmergencyList/>}/>
+                        <Route path="Emergency/:id" element={<EmergencyPage />} /> 
+
+                    </Route>
+
+                    <Route path="EvacuationPage" element={<EvacuationPage />} />
+                    <Route path="AlarmingSuitcasePage" element={<AlarmingSuitcasePage />} />
+                    <Route path="*" element={<NotFound/> } />
 
                 </Route>
 
-               
               </Routes>
             </EmergencyContext.Provider>
            </IdContext.Provider>

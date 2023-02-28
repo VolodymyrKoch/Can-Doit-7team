@@ -14,6 +14,9 @@
   box-sizing: border-box;
   background: var(--whiteColor);
 }
+.visibleLg {
+  display: block;
+}
 
 
 @media all and (max-width: 768px) {
@@ -24,5 +27,8 @@
 
   .visibleLg {
     display: none;    
+  }
+  .visibleLg {
+    display: none;
   }
 }
