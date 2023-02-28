@@ -1,15 +1,25 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { Link} from 'react-router-dom';
 import style from './EmergencyList.module.css';
 import {EmergencyContext} from '../../shared/Context/EmergencyContext';
-import EmergencyItem from './EmergencyItem';
-
+import EmergencyRenderItem from './EmergencyRenderItem';
+import useFetch from '../../Hooks/UseFetch';
+import { IsActiveContext } from '../../shared/Context/isActiveContext'
 
 const EmergencyList = () => {
 
-  const {emergency, setEmergency} = useContext(EmergencyContext);
+  const {emergency} = useContext(EmergencyContext);
+  const [currentId, setCurrentId] = useState();
+  const {isActiveLink} = useContext(IsActiveContext)
   
+  const data = useFetch('emergency')
+   
+   useEffect (() => {
+    if (isActiveLink ) 
+      setCurrentId(isActiveLink) 
+  },[isActiveLink])
 
+  
   return (
      
           <div className={style.visibleLg}> 
@@ -20,7 +30,18 @@ const EmergencyList = () => {
               : 
                 <>
                   <div className={style.pageMain}>
-                      <EmergencyItem/>
+                      { data.map( category => (
+                         currentId === category.id 
+                        ? <EmergencyRenderItem key={category.id} {...category}/> 
+                        : 
+                          <section key={category.id} className={style.sectionDesktopStyle}>
+                              <h1 className={`${style.ceTitle} ${style.ceTitleH1}`} onClick={() => setCurrentId(category.id)}> 
+                                {category.title}
+                              </h1>
+                           
+                          </section>
+
+                      )) }
                   </div> 
                   <section className={style.sectionDesktopStyle}>
                     <Link to="/EvacuationPage">

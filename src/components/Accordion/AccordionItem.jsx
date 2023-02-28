@@ -4,18 +4,23 @@ import { NavLink} from 'react-router-dom';
 import {FiChevronDown, FiChevronUp} from "react-icons/fi";
 import { IdContext } from '../../shared/Context/IdContext';
 
-const AccordionItem = ({id, title, cases}) => {
 
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [isEmergencyOpen, setIsEmergencyOpen] = useState(false);
-  const [isEmergencyItemOpen, setIsEmergencyItemOpen] = useState(false);
-  const {idSearch, setIdSearch} = useContext(IdContext);
+const AccordionItem = ({id, title, cases, isOpen, handlerOpenedItemId}) => {
 
-  const open = () => (setIsOpen(!isOpen) )
+
+  const [isEmergencyOpen, setIsEmergencyOpen] = useState(null);
+  const [isEmergencyItemOpen, setIsEmergencyItemOpen] = useState(null);
+  const {setIdSearch} = useContext(IdContext);
+   
+
+  const open = () => {
+    const openState = isOpen ? null : id;
+    handlerOpenedItemId(openState)
+
+  }
   const openEmergencyList =() => (setIsEmergencyOpen(!isEmergencyOpen));
   const openEmergencyItemList =() => (setIsEmergencyItemOpen(!isEmergencyItemOpen));
-
 
   
   return (

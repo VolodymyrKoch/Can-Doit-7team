@@ -13,41 +13,36 @@ import Logo7team from '../../shared/Logo7team/Logo7team';
 const Layout = () => {
   
   const [searchValue, setSearchValue] = useState();
-  const {idSearch, setIdSearch} = useContext(IdContext);
+  const {idSearch} = useContext(IdContext);
   const [arrayOfEmergency, setArrayOfEmergency] = useState([]);
-  const {emergency, setEmergency} = useContext(EmergencyContext);
-
-  
+  const {setEmergency} = useContext(EmergencyContext);
 
   const data = useFetch('emergency')
-   console.log('data', data)
   
- 
   const getArrayOfEmergencyFromData = () => {
     const array = []
     data.map(item => {
       item.cases.map( element => {
         element.emergency.map( elem => {
           if (!elem.emergencyItem) {
-            array.push(elem)  
-          } else { 
-            elem.emergencyItem.map(el => array.push(el))
-          } 
+            return array.push(elem)  
+          }  
+           return elem.emergencyItem.map(el => array.push(el))
+         
         })
       })
     })
     setArrayOfEmergency(array)
   }
 
-
-
+ 
   useEffect(() => {
     getArrayOfEmergencyFromData()
-
+    
   }, [data])
   
   const getObjectById = () => {
-    const obj = arrayOfEmergency.find(el => el.id === idSearch)
+   const obj = arrayOfEmergency.find(el => el.id === idSearch)
      setEmergency(obj)
   }
  

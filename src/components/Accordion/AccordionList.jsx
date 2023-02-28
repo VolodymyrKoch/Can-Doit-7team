@@ -1,17 +1,18 @@
-import React, { useState} from 'react';
+import React, { useState, useContext} from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './Accordion.module.css';
 import AccordionItem from './AccordionItem';
+import { IsActiveContext } from '../../shared/Context/isActiveContext';
 
 
 const AccordionList = ({ data }) => {
+  const [openedItemId, setOpenedItemId] = useState(null)
+  const { setIsActiveLink} = useContext(IsActiveContext)
 
-  const [isIconActive, setIsIconActive] = useState(false)
-  const [isEvacuation, setIsEvacuation] = useState(false)
-  
-  const openListIcon = () => {
-    setIsIconActive((open) => !open) 
-  }
+const handlerOpenedItemId = (id) => {
+  setOpenedItemId(id);
+  setIsActiveLink(id)
+}
 
   return (
 
@@ -20,12 +21,11 @@ const AccordionList = ({ data }) => {
 
             {data.map((someCase) => (
                 <li key={someCase.id} className={style.border} >
-                    <AccordionItem  {...someCase} />
+                    <AccordionItem  {...someCase} handlerOpenedItemId = {handlerOpenedItemId} isOpen = {openedItemId === someCase.id}/>
               </li>
             ))}
-        
-        
-            <li  className={style.border} onClick={() => setIsEvacuation(!isEvacuation)}>
+
+            <li  className={style.border} >
               <NavLink to="EvacuationPage" className={style.styleList}> 
                   {({isActive}) => (
                     <>
@@ -35,7 +35,7 @@ const AccordionList = ({ data }) => {
                   )}
               </NavLink>
             </li>
-            <li onClick={openListIcon} className={style.border}>
+            <li  className={style.border}>
               <NavLink to="AlarmingSuitcasePage" className={style.styleList}>
                   {({isActive}) => (
                     <>
