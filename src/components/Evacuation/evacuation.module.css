@@ -8,7 +8,7 @@
   #componentEvacuation {
     font-family:'Inter', 'Montserrat', 'Roboto', sans-serif;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     color: var( --blackFont);
     width: 100%;
   }
@@ -17,18 +17,18 @@
     margin-top: 24px;
     margin-left: 24px;
     width: 100%;
-    min-height: 536px;
     border-color: var(--backgroundWhite);
     box-shadow: 0px 2px 4px rgba(31, 41, 55, 0.06), 0px 4px 6px rgba(100, 116, 139, 0.12);
     border-radius: 5px;
     padding-left: 40px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
 
   }
 
   .evacTitle h2 {
-    font-family:'Inter', sans-serif;
+    font-family:'Monserat', sans-serif;
     border-bottom: 2px solid #E6E8F0;
     padding-top: 32px;
     padding-bottom: 24px;
@@ -48,6 +48,80 @@
     white-space: normal;
   }
 
+  .evacTodoItem {
+    padding-left: 40px;
+  }
  
+  /* @media (max-width: 768px) { */
+    /* s */
+  /* .evacContent  {
+    color: white;
+  } */
   
+
+  @media (max-width: 768px) {
+    /* s */
+  
+  .container {
+    width:100%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background: var(--backgroundBlack);
+  }
+  #componentMain {
+    font-family:'Inter', 'Montserrat', 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--whiteColor);
+    width: 80%;
+    margin:0 0 0 0;
+  }
+
+  .ceContent {
+    display: flex;
+    flex-direction: column;
+    grid-gap:0;
+  }
+
+  .mainTitle h2 {
+    font-family:'Inter', sans-serif;
+    border-bottom: 2px solid #E6E8F0;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    font-weight: 600;
+    display: block;
+    
+  }
+       
+  .textHome {
+    padding-top: 20px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    font-weight: 200;
+    color: var (--whiteColor);
+  }
+  .textHome p {
+    margin-top: 20px;
+  }
+
+  .phone {
+    color:#ff2800;
+  }
+
+  .carouselBox {
+    display: none;
+  }
+
+  .logo {
+    border-bottom: 3px solid #E6E8F0;
+    padding-bottom: 24px;
+    width: 100%;
+  }
+
+  .mainTitle h2 {
+    display: none;
+  }
+  
+}
  

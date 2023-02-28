@@ -4,9 +4,8 @@ import style from './EmergencyPage.module.css';
 import Navigation from '../../shared/Navigation/Navigation';
 import Header from '../../components/Header/Header';
 import { EmergencyContext } from '../../shared/Context/EmergencyContext.js';
+//import Breadcrumbs from '../../shared/Breadcrumbs/Breadcrumbs.jsx';
 import { Link } from 'react-router-dom';
-
-
 const EmergencyPage = () => {
   
   
