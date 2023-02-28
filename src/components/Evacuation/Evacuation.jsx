@@ -1,15 +1,10 @@
 //import React from "react";
-import React, { useContext } from 'react';
+import React from 'react';
 
 import style from'./evacuation.module.css';
 
-import { SearchContext } from '../../shared/search-context';
-import { Link } from 'react-router-dom';
-
 const Evacuation = props => {
- const  searchValue = useContext (SearchContext);
-
-   return (
+    return (
 
     <div>
         <div className={style.container}>

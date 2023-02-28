@@ -23,7 +23,10 @@
   .pageMain {
     background: var(--body-bg);
     width:100%;
+  }
 
+  .visibleLg {
+    display: none;    
   }
   .visibleLg {
     display: none;
