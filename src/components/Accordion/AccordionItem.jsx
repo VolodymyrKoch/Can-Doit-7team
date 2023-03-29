@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import style from './Accordion.module.css';
 import { NavLink} from 'react-router-dom';
 import {FiChevronDown, FiChevronUp} from "react-icons/fi";
@@ -9,6 +9,7 @@ import { IdContext } from '../../shared/Context/IdContext';
 const AccordionItem = ({id, title, cases, isOpen, handlerOpenedItemId}) => {
 
 
+  
   const [isEmergencyOpen, setIsEmergencyOpen] = useState(null);
   const [isEmergencyItemOpen, setIsEmergencyItemOpen] = useState(null);
   const {setIdSearch} = useContext(IdContext);
@@ -22,6 +23,7 @@ const AccordionItem = ({id, title, cases, isOpen, handlerOpenedItemId}) => {
   const openEmergencyList =() => (setIsEmergencyOpen(!isEmergencyOpen));
   const openEmergencyItemList =() => (setIsEmergencyItemOpen(!isEmergencyItemOpen));
 
+  
   
   return (
 
@@ -59,7 +61,7 @@ const AccordionItem = ({id, title, cases, isOpen, handlerOpenedItemId}) => {
                           <li key={emergencyItem.id} className={style.information} >
 
                               {!emergencyItem.emergencyItem 
-                                ? <NavLink to={`Category/Emergency/${emergencyItem.id}`} >
+                                ? <NavLink to={`Category/Emergency-${emergencyItem.id}`} >
                                   { ({isActive}) => (
                                     <span
                                       className={`${style.fontColor} ${isActive ? style.fontColorActive : '' }`} 
@@ -89,7 +91,7 @@ const AccordionItem = ({id, title, cases, isOpen, handlerOpenedItemId}) => {
                                 
                                 {isEmergencyItemOpen && emergencyItem.emergencyItem.map(i =>  (
                                   <li key={i.id} className={style.information} > 
-                                    <NavLink to={`Category/Emergency/${i.id}`}> 
+                                    <NavLink to={`Category/Emergency-${i.id}`}> 
                                       {({isActive}) => (
                                         <span 
                                           className={`${style.itemStyle} ${isActive ? style.fontColorActive : '' }` } 

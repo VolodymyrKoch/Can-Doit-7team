@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './MainPage.module.css';
-import { Routes, Route } from 'react-router-dom';import { Layout } from '../Layout/Layout.jsx';
+import { Routes, Route} from 'react-router-dom';
+import { Layout } from '../Layout/Layout.jsx';
 import EmergencyListPage from '../EmergencyListPage/EmergencyListPage';
 import EmergencyPage from '../EmergencyPage/EmergencyPage';
 import EvacuationPage from '../EvacuationPage/EvacuationPage';
@@ -15,13 +16,15 @@ import { IsActiveContext } from '../../shared/Context/isActiveContext';
 
 
 
+
 const MainPage = function () {
 
   const [searchValue, setSearchValue] = useState('');
   const [idSearch, setIdSearch] = useState([]);
   const [emergency, setEmergency] = useState();
   const [isActiveLink, setIsActiveLink] = useState(null);
- 
+
+
 
   return (
     <>
@@ -34,17 +37,17 @@ const MainPage = function () {
     
                     <Route path="/" element={<Layout />}>
 
-                        <Route index element={<HomePage />} />
+                        <Route index element={<HomePage />}/>
                       
-                        <Route path="Category/" element={<EmergencyListPage />} >
+                        <Route path="Category"  element={<EmergencyListPage />}>
 
                             <Route path=":id" element={<EmergencyList/>}/>
-                            <Route path="Emergency/:id" element={<EmergencyPage />} /> 
+                            <Route path="Emergency-:emergencyid" element={<EmergencyPage />}/> 
 
                         </Route>
 
-                        <Route path="EvacuationPage" element={<EvacuationPage />} />
-                        <Route path="AlarmingSuitcasePage" element={<AlarmingSuitcasePage />} />
+                        <Route path="EvacuationPage" element={<EvacuationPage />}/>
+                        <Route path="AlarmingSuitcasePage" element={<AlarmingSuitcasePage />}/>
                         <Route path="*" element={<NotFound/> } />
 
                     </Route>
