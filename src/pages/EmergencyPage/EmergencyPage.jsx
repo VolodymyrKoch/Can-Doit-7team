@@ -1,16 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Emergency from '../../components/Emergency/Emergency.jsx';
 import style from './EmergencyPage.module.css';
 import { EmergencyContext } from '../../shared/Context/EmergencyContext.js';
 
-//import Breadcrumbs from '../../shared/Breadcrumbs/Breadcrumbs.jsx';
+
 
 
 const EmergencyPage = () => {
-  
-  
-  const {emergency} = useContext(EmergencyContext);
+
+   const {emergency} = useContext(EmergencyContext);
+
+ 
   
   return (
 

@@ -1,9 +1,9 @@
 import React, { useState} from 'react';
 import style from './evacuationPage.module.css';
-import Navigation from '../../shared/Navigation/Navigation';
 import imageEmergency from '../../image/image1Max.jpg'
 import Header from '../../components/Header/Header';
 import Evacuation from '../../components/Evacuation/Evacuation.jsx';
+import BreadCrumbs from '../../shared/Breadcrumbs/BreadCrumb';
 
 const EvacuationPage = (props) => {
 
@@ -17,7 +17,7 @@ const EvacuationPage = (props) => {
 
         <div className={style.visibleLg}>
           <Header setSearchValue={setSearchValue} />
-          <Navigation /> 
+          <BreadCrumbs/>
           </div> 
 
           <div className={style.pageOutlet}>

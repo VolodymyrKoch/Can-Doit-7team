@@ -25,7 +25,7 @@ const EmergencyList = () => {
           <div className={style.visibleLg}> 
             { emergency 
 
-              ? <Link to={`Emergency/${emergency.id}`}/> 
+              ? <Link to={`emergency-${emergency.id}`}/> 
 
               : 
                 <>

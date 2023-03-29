@@ -45,7 +45,7 @@ const EmergencyItem = () => {
 
                                 {!el.emergencyItem ?                       
                                   <li className={style.listFirst} onClick = {() => setIdSearch(el.id)}>
-                                    <Link to={`/Category/Emergency/${el.id}`}>{el.title}</Link>  
+                                    <Link to={`/Category/${el.id}`}>{el.title}</Link>  
                                   </li> :
                                   <>
                                     <li className={style.listFirst} onClick = {() => setIdSearch(el.id)}>
@@ -54,7 +54,7 @@ const EmergencyItem = () => {
 
                                     {openItemBlock && el.emergencyItem.map( element => (
                                       <li key={element.id} className={style.listSecond} onClick = {() => setIdSearch(element.id)} >
-                                        <Link to={`/Category/Emergency/${element.id}`}>{element.title}</Link>
+                                        <Link to={`/Category/${element.id}`}>{element.title}</Link>
                                       </li>
                                     ))}
                                   </>

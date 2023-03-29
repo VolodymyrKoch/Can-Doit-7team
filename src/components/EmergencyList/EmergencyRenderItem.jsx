@@ -32,13 +32,14 @@ const EmergencyRenderItem = (category) => {
                   <li  className={style.list} onClick = {() => setIdSearch(elem.id)}>
                     <span className={style.buttonStyle} >{elem.title}</span>
                   </li>
+                  <hr className={style.ceHrFirstLevel }/>
 
                     { elem.emergency.map( el => (
                         <div key={el.id} >
 
                           {!el.emergencyItem ?                       
                             <li className={style.listFirst} onClick = {() => setIdSearch(el.id)}>
-                              <Link to={`/Category/Emergency/${el.id}`}>{el.title}</Link>  
+                              <Link to={`/Category/Emergency-${el.id}`}>{el.title}</Link>  
                             </li> :
                             <>
                               <li className={style.listFirst} onClick = {() => setIdSearch(el.id)}>
@@ -47,7 +48,7 @@ const EmergencyRenderItem = (category) => {
 
                               { el.emergencyItem.map( element => (
                                 <li key={element.id} className={style.listSecond} onClick = {() => setIdSearch(element.id)} >
-                                  <Link to={`/Category/Emergency/${element.id}`}>{element.title}</Link>
+                                  <Link to={`/Category/Emergency-${element.id}`}>{element.title}</Link>
                                 </li>
                               ))}
                             </>

@@ -1,8 +1,9 @@
 import React, { useState} from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import style from './EmergencyListPage.module.css';
 import Header from '../../components/Header/Header';
-import Navigation from '../../shared/Navigation/Navigation';
+import BreadCrumbs from '../../shared/Breadcrumbs/BreadCrumb';
+import EmergencyList from '../../components/EmergencyList/EmergencyList';
 
 
 
@@ -10,7 +11,9 @@ import Navigation from '../../shared/Navigation/Navigation';
 const EmergencyListPage = () => {
 
   const [searchValue, setSearchValue] = useState('');
-
+  const param = useParams();
+  const paramLength =  Object.entries(param).length
+ 
 
   return (
 
@@ -19,11 +22,11 @@ const EmergencyListPage = () => {
             <div className={style.visibleLg}>
 
               <Header setSearchValue={setSearchValue} />
-              <Navigation /> 
+              <BreadCrumbs/>
             </div>
 
             <div className={style.container}> 
-                <Outlet/>
+               {paramLength ?  <Outlet/> : <EmergencyList/>}
             </div>
 
         </div>  

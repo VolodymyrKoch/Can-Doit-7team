@@ -1,0 +1,34 @@
+
+.ceBreadcrumb {
+  width:100%;
+  margin: 0.5rem 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ceCrumb {
+  line-height: 1.2rem;
+  font-weight: 400;
+  
+}
+.ceBreadcrumb .ceCrumb::after{
+  content: '/';
+  padding: 0.5rem;
+  color: #b2b2b2;
+
+}
+.ceBreadcrumb .ceCrumb:last-child::after{
+  display: none;
+}
+.ceBreadcrumb .ceCrumb a{
+  color: #6f6d6d;
+}
+
+/* .breadcrumb-not-active {
+  color: #cccccc;
+} */
+  
+.breadcrumb-active {
+  color: #000000;
+}
