@@ -9,9 +9,8 @@ const BreadCrumbs = () => {
   const location = useLocation();
 
   let currentLink = '';
-
   const crumbs = location.pathname.split('/')
-    .filter( crumb => crumb !== '')
+    .filter(crumb => crumb !== '')
       .map( crumb => {
     
         currentLink += `/${crumb}`;
@@ -24,11 +23,16 @@ const BreadCrumbs = () => {
   })
 
   return (
-    <div className={style.ceBreadcrumb}>
+    <div className={style.ceBreadcrumb} >
       <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="/">
-          Home
+        
+       <div className={style.ceCrumb}> 
+        <Link underline="hover" color="inherit" href="/">  
+           Home
         </Link>
+       </div>
+        
+        
          {crumbs}
       </Breadcrumbs>
     </div>

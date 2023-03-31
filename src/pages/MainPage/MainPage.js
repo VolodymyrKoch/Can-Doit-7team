@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './MainPage.module.css';
 import { Routes, Route} from 'react-router-dom';
 import { Layout } from '../Layout/Layout.jsx';
@@ -24,7 +24,9 @@ const MainPage = function () {
   const [emergency, setEmergency] = useState();
   const [isActiveLink, setIsActiveLink] = useState(null);
 
-
+useEffect(() => {
+  console.log('emergency',emergency)
+})
 
   return (
     <>
