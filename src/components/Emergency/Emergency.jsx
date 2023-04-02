@@ -17,7 +17,7 @@ const Emergency = () => {
   const [activeTodoList, setActiveTodoList] = useState(true)
   const {emergency, setEmergency} = useContext(EmergencyContext);
   console.log('emergency in component', emergency)
- 
+
 useEffect(() => {
   console.log('renderItem')
   return function () {

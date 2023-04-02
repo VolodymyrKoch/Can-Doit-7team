@@ -4,21 +4,16 @@ import style from './EmergencyList.module.css';
 import {EmergencyContext} from '../../shared/Context/EmergencyContext';
 import EmergencyRenderItem from './EmergencyRenderItem';
 import useFetch from '../../Hooks/UseFetch';
-import { IsActiveContext } from '../../shared/Context/isActiveContext'
+
 
 
 const EmergencyList = () => {
 
   const {emergency} = useContext(EmergencyContext);
   const [currentId, setCurrentId] = useState();
-  const {isActiveLink} = useContext(IsActiveContext)
+
   
   const data = useFetch('emergency')
-   
-  //  useEffect (() => {
-  //   if (isActiveLink ) 
-  //     setCurrentId(isActiveLink) 
-  // },[isActiveLink])
    
   useEffect(() => {
 
@@ -29,9 +24,9 @@ const EmergencyList = () => {
      
           <div className={style.visibleLg}> 
 
-            { emergency 
-
-              ? <Link to={`emergency-${emergency.id}`}/> 
+            { emergency &&  currentId === emergency.id
+             
+              ? <Link to={`emergency-${emergency.id}` }/> 
 
               : 
                 <>
