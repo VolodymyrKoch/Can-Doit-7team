@@ -6,6 +6,7 @@ import EmergencyRenderItem from './EmergencyRenderItem';
 import useFetch from '../../Hooks/UseFetch';
 import { IsActiveContext } from '../../shared/Context/isActiveContext'
 
+
 const EmergencyList = () => {
 
   const {emergency} = useContext(EmergencyContext);
@@ -14,15 +15,20 @@ const EmergencyList = () => {
   
   const data = useFetch('emergency')
    
-   useEffect (() => {
-    if (isActiveLink ) 
-      setCurrentId(isActiveLink) 
-  },[isActiveLink])
+  //  useEffect (() => {
+  //   if (isActiveLink ) 
+  //     setCurrentId(isActiveLink) 
+  // },[isActiveLink])
+   
+  useEffect(() => {
+
+  })
 
   
   return (
      
           <div className={style.visibleLg}> 
+
             { emergency 
 
               ? <Link to={`emergency-${emergency.id}`}/> 

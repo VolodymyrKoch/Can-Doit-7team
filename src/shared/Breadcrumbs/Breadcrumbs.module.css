@@ -7,6 +7,10 @@
   flex-wrap: wrap;
 }
 
+.ceBreadcrumb li:last-of-type  a{
+  color: #000000; 
+}
+
 .ceCrumb {
   line-height: 1.2rem;
   font-weight: 400;
@@ -21,14 +25,7 @@
 .ceBreadcrumb .ceCrumb:last-child::after{
   display: none;
 }
+
 .ceBreadcrumb .ceCrumb a{
   color: #6f6d6d;
-}
-
-/* .breadcrumb-not-active {
-  color: #cccccc;
-} */
-  
-.breadcrumb-active {
-  color: #000000;
 }
