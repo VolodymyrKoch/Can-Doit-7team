@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import style from './Layout.module.css';
 import Logo from '../../components/Logo/Logo';
 import AccordionList from '../../components/Accordion/AccordionList';
@@ -12,10 +12,10 @@ import Logo7team from '../../shared/Logo7team/Logo7team';
 
 const Layout = () => {
   
-  const [searchValue, setSearchValue] = useState();
+  const [setSearchValue] = useState();
   const {idSearch} = useContext(IdContext);
   const [arrayOfEmergency, setArrayOfEmergency] = useState([]);
-  const {setEmergency} = useContext(EmergencyContext);
+  const { setEmergency} = useContext(EmergencyContext);
 
   const data = useFetch('emergency')
   
@@ -35,6 +35,8 @@ const Layout = () => {
     setArrayOfEmergency(array)
   }
 
+  const param = useParams();
+
  
   useEffect(() => {
     getArrayOfEmergencyFromData()
@@ -42,14 +44,18 @@ const Layout = () => {
   }, [data])
   
   const getObjectById = () => {
-   const obj = arrayOfEmergency.find(el => el.id === idSearch)
-     setEmergency(obj)
+    let obj = {}
+    param.emergencyid ?
+     obj = arrayOfEmergency.find(el => el.id === param.emergencyid ) :
+     obj = arrayOfEmergency.find(el => el.id === idSearch )
+     setEmergency(obj);
+     
   }
- 
+
   useEffect(() => {
     getObjectById();
 
-  }, [idSearch])
+  })
   
 
   return (

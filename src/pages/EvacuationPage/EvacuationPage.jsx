@@ -23,8 +23,6 @@ const EvacuationPage = (props) => {
           <div className={style.pageOutlet}>
           <Evacuation />
           </div>
- 
-                  <Evacuation />
 
         </div>  
     </>
