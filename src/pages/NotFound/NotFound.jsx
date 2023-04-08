@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import BreadCrumbs from "../../shared/Breadcrumbs/BreadCrumb";
+import BreadCrumbs from "../../shared/Breadcrumbs/Breadcrumbs";
 import style from './NotFound.module.css'
 import Header from "../../components/Header/Header";
 

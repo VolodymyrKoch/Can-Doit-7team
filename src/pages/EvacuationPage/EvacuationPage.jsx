@@ -3,7 +3,7 @@ import style from './evacuationPage.module.css';
 import imageEmergency from '../../image/image1Max.jpg'
 import Header from '../../components/Header/Header';
 import Evacuation from '../../components/Evacuation/Evacuation.jsx';
-import BreadCrumbs from '../../shared/Breadcrumbs/BreadCrumb';
+import BreadCrumbs from '../../shared/Breadcrumbs/Breadcrumbs';
 
 const EvacuationPage = (props) => {
 
