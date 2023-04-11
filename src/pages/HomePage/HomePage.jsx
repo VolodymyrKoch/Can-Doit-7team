@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import style from './HomePage.module.css';
 import Header from '../../components/Header/Header';
 import Home from '../../components/Home/Home.jsx';
-import BreadCrumbs from '../../shared/Breadcrumbs/BreadCrumb';
+import BreadCrumbs from '../../shared/Breadcrumbs/Breadcrumbs';
 
 const HomePage = () => {
 

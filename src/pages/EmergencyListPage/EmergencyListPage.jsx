@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import style from './EmergencyListPage.module.css';
 import Header from '../../components/Header/Header';
-import BreadCrumbs from '../../shared/Breadcrumbs/BreadCrumb';
+import BreadCrumbs from '../../shared/Breadcrumbs/Breadcrumbs';
 import EmergencyList from '../../components/EmergencyList/EmergencyList';
 
 

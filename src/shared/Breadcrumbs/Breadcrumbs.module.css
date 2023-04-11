@@ -7,10 +7,12 @@
   flex-wrap: wrap;
 }
 
-.ceBreadcrumb li:last-of-type  a{
+/* .ceBreadcrumb li:last-of-type  a{
+  color: #000000; 
+} */
+.ceBreadcrumb div:last-of-type  a{
   color: #000000; 
 }
-
 .ceCrumb {
   line-height: 1.2rem;
   font-weight: 400;
@@ -29,3 +31,6 @@
 .ceBreadcrumb .ceCrumb a{
   color: #6f6d6d;
 }
+.ceBreadcrumb .ceCrumb:hover a{
+  color:  var(--btnDesktop);
+ }

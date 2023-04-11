@@ -19,10 +19,7 @@ const Emergency = () => {
   console.log('emergency in component', emergency)
 
 useEffect(() => {
-  console.log('renderItem')
-  return function () {
-    console.log('destroyed')
-  }
+  
 })
   const setVisibleBlock = () => {
 
