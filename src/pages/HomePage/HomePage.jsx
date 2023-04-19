@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState} from 'react';
 import style from './HomePage.module.css';
 import Header from '../../components/Header/Header';
 import Home from '../../components/Home/Home.jsx';
@@ -16,7 +16,6 @@ const HomePage = () => {
           <Header setSearchValue={setSearchValue} />
               <BreadCrumbs/>
           </div>
-
           <div className={style.pageOutlet}>
              <Home /> 
           </div>
