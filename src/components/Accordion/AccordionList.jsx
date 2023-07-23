@@ -7,7 +7,7 @@ const AccordionList = ({ data }) => {
 
   const [iconActive, setIconActive] = useState(true)
   const openListIcon = () => {
-    setIconActive((open) => !open) 
+    setIconActive((open) => !open)
   }
 
   return (
@@ -15,8 +15,8 @@ const AccordionList = ({ data }) => {
       <div className={`${style.container} ${style.width100}`}>
         {data.map((someCase) => (
           <div key={someCase.id} >
-            <AccordionItem  
-              {...someCase} 
+            <AccordionItem
+              {...someCase}
           />
           </div>
         ))}
