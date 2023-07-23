@@ -11,6 +11,7 @@ import AlarmingSuitcasePage from '../AlarmingSuitcasePage/AlarmingSuitcasePage.j
 import { SearchContext } from '../../shared/search-context';
 import { IdContext } from '../../shared/Context/IdContext';
 import { EmergencyContext} from '../../shared/Context/EmergencyContext'
+import HomePage from '../HomePage/HomePage';
 
 
 
@@ -31,19 +32,17 @@ const MainPage = function () {
             <EmergencyContext.Provider value={{emergency, setEmergency}}>
               <Routes>
                 <Route path="/" element={<Layout />}>
-                  <Route
-                    path="/EmergencyListPage"
-                    element={<EmergencyListPage />}
-                  />
+                
+                  <Route index element={<HomePage />} />
 
-                  <Route path="/EmergencyPage" element={<EmergencyPage />} />
+                  <Route path="EmergencyListPage" element={<EmergencyListPage />} />
 
-                  <Route path="/EvacuationPage" element={<EvacuationPage />} />
+                  <Route path="EmergencyPage" element={<EmergencyPage />} />
 
-                  <Route
-                    path="/AlarmingSuitcasePage"
-                    element={<AlarmingSuitcasePage />}
-                  />
+                  <Route path="EvacuationPage" element={<EvacuationPage />} />
+
+                  <Route path="AlarmingSuitcasePage" element={<AlarmingSuitcasePage />} />
+
                 </Route>
               </Routes>
             </EmergencyContext.Provider>
