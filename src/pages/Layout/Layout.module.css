@@ -48,7 +48,6 @@
   }
   .layoutContent {
     background: var(--body-bg);
-    border-radius: 0 0 29px 29px;
   }
   .epAside {
     /* width: 100%; */

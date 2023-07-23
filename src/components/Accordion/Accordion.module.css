@@ -10,32 +10,44 @@
 }
 
 
-summary {
-	display: grid;
-	grid-template-columns: auto 1fr 40px;
-	align-items: center;
-	cursor: pointer;
-	list-style-type: none;
-   color: azure;
-	box-sizing: border-box;
+.styleList {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    list-style-type: none;
+    color: #9e9fa1;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 1.125em;
+  
+  }
 
-}
 .aligment {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width:100%;
 }
 
-summary,
+.styleList {
+  padding: 0.5rem 0 0.5rem 5px;
+} 
 .information {
-	padding: 1rem;
+	padding: 0.5rem 0;
 }
 
 .information {
-	border-top: 1px solid var(--collapse-line-color);
+  margin: 0.5rem 0.3rem 0.5rem 0.5rem;
+  padding: 0 5px;
+  background-color: #282f3c;
+  border-radius: 8px;
 }
-
-summary .icon {
+.informationBlock {
+  background-color: #384153;
+  border-radius: 8px;
+}
+.styleList .icon{
 	display: inline-block;
 	width: 24px;
 	height: 24px;
@@ -43,21 +55,24 @@ summary .icon {
 	color: var(--collapse-icon-color);
 	box-sizing: border-box;
 }
+.iconItem1 {
+  background:no-repeat center center url('../../image/icon/bookbook.png');
+}
+.iconItem2 {
+  background:no-repeat center center url('../../image/icon/book2.png');
+}
 
 .container {
-	color: var(--body-color);
-	background: var(--body-bg);
 	margin: 0 auto;
 	padding: 0;
 	width: 383px;
 	padding: 20px;
 	box-sizing: border-box;
 	}
-.width100 {
-  width:100%;
-}
+
+
 .iconItem {
-  display: inline-block;
+  display: block;
 	width: 40px;
 	height: 40px;
 	background-size: auto;
@@ -66,27 +81,41 @@ summary .icon {
 
 }
 
-.iconItem1 {
-	background: center no-repeat url('../../image/icon/bookbook.png');
-}
-.iconItem2 {
-	background:center no-repeat url('../../image/icon/book2.png');
+.fontColor {
+  color: #9e9fa1;
+  display: block;
+  width: 100%;
+  }
 
+/* .borderBottom {
+  padding-bottom:5px;
+  border-bottom:1px solid rgba(188, 191, 194, 0.2);
+} */
+
+
+.itemStyle {
+  display: block;
+  padding: 0 10px;
+  border-bottom:1px solid rgba(188, 191, 194, 0.2);
+  width: 100%;
+  color: #9e9fa1;
 }
 .fontColorActive{
   color: azure;
-  padding: 0.5rem;
-  font-weight: 600;
-  font-size: 1.125rem;
-  margin: 0.5rem 0;
-  
-}
-
-@media all and (max-width:768px) {
-  /* summary {
-    
-    color: #70747d;
    
-  } */
+}
+.width100 {
+  width:100%;
+  padding: 0 10px;
 
 }
+.displayBlock {
+  display: block;
+}
+.displayNone {
+  display:none;
+}
+.border {
+  border-top: 1px solid #bcc1cd;;
+}
+

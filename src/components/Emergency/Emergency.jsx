@@ -1,5 +1,5 @@
 
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import style from './Emergency.module.css';
 import { SearchContext } from '../../shared/search-context';
 
@@ -16,11 +16,14 @@ const Emergency = () => {
   const [isActiveReadMore, setIsActiveReadMore] = useState(false)
   const [activeTodoList, setActiveTodoList] = useState(true)
   const {emergency, setEmergency} = useContext(EmergencyContext);
- 
+  console.log('emergency in component', emergency)
 
+useEffect(() => {
+  
+})
   const setVisibleBlock = () => {
 
-    setIsActiveReadMore( (visible) => !visible)
+    setIsActiveReadMore( visible => !visible)
   }
   
    return (

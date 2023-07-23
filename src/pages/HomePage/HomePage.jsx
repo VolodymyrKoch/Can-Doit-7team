@@ -1,13 +1,29 @@
-import React from "react";
-import AccordionList from "../../components/Accordion/AccordionList";
-import Header from "../../components/Header/Header";
+import React, { useState} from 'react';
+import style from './HomePage.module.css';
+import Header from '../../components/Header/Header';
+import Home from '../../components/Home/Home.jsx';
+import BreadCrumbs from '../../shared/Breadcrumbs/Breadcrumbs';
 
 const HomePage = () => {
 
+  const [searchValue, setSearchValue] = useState('');
+
   return (
     <>
-    <Header/>
+          <div className={style.pageMain}>
+          
+          <div className={style.visibleLg}>
+          <Header setSearchValue={setSearchValue} />
+              <BreadCrumbs/>
+          </div>
+          <div className={style.pageOutlet}>
+             <Home /> 
+          </div>
+
+        </div>
+           
     </>
-  )
-}
+  );
+};
+
 export default HomePage;

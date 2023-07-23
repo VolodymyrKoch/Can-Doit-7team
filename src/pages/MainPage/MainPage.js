@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './MainPage.module.css';
-import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
-
+import { Routes, Route} from 'react-router-dom';
 import { Layout } from '../Layout/Layout.jsx';
 import EmergencyListPage from '../EmergencyListPage/EmergencyListPage';
 import EmergencyPage from '../EmergencyPage/EmergencyPage';
@@ -12,6 +10,10 @@ import { SearchContext } from '../../shared/search-context';
 import { IdContext } from '../../shared/Context/IdContext';
 import { EmergencyContext} from '../../shared/Context/EmergencyContext'
 import HomePage from '../HomePage/HomePage';
+import NotFound from '../NotFound/NotFound';
+import EmergencyList from '../../components/EmergencyList/EmergencyList';
+import { IsActiveContext } from '../../shared/Context/isActiveContext';
+
 
 
 
@@ -20,33 +22,42 @@ const MainPage = function () {
   const [searchValue, setSearchValue] = useState('');
   const [idSearch, setIdSearch] = useState([]);
   const [emergency, setEmergency] = useState();
+  const [isActiveLink, setIsActiveLink] = useState(null);
 
-
-  console.log('idSearch', idSearch)
+useEffect(() => {
+  console.log('emergency',emergency)
+})
 
   return (
     <>
       <div className={styles.bgContainer}>
         <SearchContext.Provider value={searchValue}>
-          <IdContext.Provider value={{idSearch, setIdSearch}}>
-            <EmergencyContext.Provider value={{emergency, setEmergency}}>
-              <Routes>
-                <Route path="/" element={<Layout />}>
-                
-                  <Route index element={<HomePage />} />
+            <IdContext.Provider value={{idSearch, setIdSearch}}>
+              <EmergencyContext.Provider value={{emergency, setEmergency}}>
+              <IsActiveContext.Provider value={{ isActiveLink, setIsActiveLink }}>
+                  <Routes>
+    
+                    <Route path="/" element={<Layout />}>
 
-                  <Route path="EmergencyListPage" element={<EmergencyListPage />} />
+                        <Route index element={<HomePage />}/>
+                      
+                        <Route path="Category"  element={<EmergencyListPage />}>
 
-                  <Route path="EmergencyPage" element={<EmergencyPage />} />
+                            <Route path=":id" element={<EmergencyList/>}/>
+                            <Route path="Emergency-:emergencyid" element={<EmergencyPage />}/> 
 
-                  <Route path="EvacuationPage" element={<EvacuationPage />} />
+                        </Route>
 
-                  <Route path="AlarmingSuitcasePage" element={<AlarmingSuitcasePage />} />
+                        <Route path="EvacuationPage" element={<EvacuationPage />}/>
+                        <Route path="AlarmingSuitcasePage" element={<AlarmingSuitcasePage />}/>
+                        <Route path="*" element={<NotFound/> } />
 
-                </Route>
-              </Routes>
-            </EmergencyContext.Provider>
-           </IdContext.Provider>
+                    </Route>
+
+                </Routes>
+                </IsActiveContext.Provider>
+              </EmergencyContext.Provider>
+            </IdContext.Provider>
         </SearchContext.Provider>
       </div>
     </>

@@ -1,0 +1,58 @@
+.notFound {
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notFoundStyle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width:40%;
+  height: auto;
+  /* border: 3px solid #D8D8D8; */
+  border-radius: 3px;
+  color:#70747d;
+  font-size: 2rem;
+  background: no-repeat center url('../../image/1503162.svg');
+  background-size: contain;
+}
+.notFoundP {
+
+  font-size:1.25rem;
+  margin: 2rem;
+}
+.pageMain {
+  margin: 0 auto;
+  width:100%;
+  box-sizing: border-box; 
+  background: var(--whiteColor);
+  
+}
+.visibleLg{
+  display: block;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 0 36px;
+}
+
+@media all and (max-width:768px) {
+  .pageMain {
+    background: var(--body-bg);
+    width:100%;
+
+  }
+  .visibleLg{
+    display: none;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.5rem;
+  }
+}

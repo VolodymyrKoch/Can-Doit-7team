@@ -1,33 +1,36 @@
 import React, { useState} from 'react';
+import { Outlet, useParams } from 'react-router-dom';
 import style from './EmergencyListPage.module.css';
-import imageEmergency from '../../image/image1Max.jpg'
 import Header from '../../components/Header/Header';
+import BreadCrumbs from '../../shared/Breadcrumbs/Breadcrumbs';
+import EmergencyList from '../../components/EmergencyList/EmergencyList';
 
 
 
 
-
-const EmergencyListPage = (props) => {
+const EmergencyListPage = () => {
 
   const [searchValue, setSearchValue] = useState('');
+  const param = useParams();
+  const paramLength =  Object.entries(param).length
+ 
 
   return (
-    <>
-       
+
         <div className={style.pageMain}>
 
-            <Header setSearchValue={setSearchValue} />
-          
+            <div className={style.visibleLg}>
 
-            <div className={`${style.visibleLg} ${style.imageContainer}`}> 
-                <img src={imageEmergency} className={style.imageEmergency} alt="Emergency" />
+              <Header setSearchValue={setSearchValue} />
+              <BreadCrumbs/>
             </div>
 
-
-
+            <div className={style.container}> 
+               {paramLength ?  <Outlet/> : <EmergencyList/>}
+            </div>
 
         </div>  
-    </>
+
   );
 };
 

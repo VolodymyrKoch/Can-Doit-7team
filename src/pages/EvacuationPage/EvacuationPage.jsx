@@ -3,6 +3,7 @@ import style from './evacuationPage.module.css';
 import imageEmergency from '../../image/image1Max.jpg'
 import Header from '../../components/Header/Header';
 import Evacuation from '../../components/Evacuation/Evacuation.jsx';
+import BreadCrumbs from '../../shared/Breadcrumbs/Breadcrumbs';
 
 const EvacuationPage = (props) => {
 
@@ -13,15 +14,15 @@ const EvacuationPage = (props) => {
        
         <div className={style.pageMain}>
 
-            <Header setSearchValue={setSearchValue} />
 
-                <div className={`${style.visibleLg} ${style.imageContainer}`}> 
-                <Evacuation />
-           
-            </div>
+        <div className={style.visibleLg}>
+          <Header setSearchValue={setSearchValue} />
+          <BreadCrumbs/>
+          </div> 
 
-
-
+          <div className={style.pageOutlet}>
+          <Evacuation />
+          </div>
 
         </div>  
     </>

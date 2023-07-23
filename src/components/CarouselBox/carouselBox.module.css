@@ -1,0 +1,11 @@
+.carouselBox {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .carouselBox img {
+    margin-left: 5px;
+    width: 30%;
+    
+  }
